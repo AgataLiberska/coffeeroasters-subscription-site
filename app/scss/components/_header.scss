@@ -44,6 +44,11 @@
     right: 0;
     left: 0;
     background-image: linear-gradient($lightCream 40%, $lightCreamGradient);
+
+
+    @include breakpoint-up(medium) {
+        display: none;
+    }
 }
 
 .header__mobile-nav__list {
