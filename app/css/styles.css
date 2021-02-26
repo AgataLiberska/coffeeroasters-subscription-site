@@ -15,5 +15,61 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #fefcf7;
+  font-family: "Barlow", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0.5rem 2.5rem 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .header {
+    padding-top: 2.5rem;
+  }
+}
+
+.header__logo {
+  display: block;
+  padding: 1rem 0;
+  height: 3.125rem;
+  width: 10.25rem;
+}
+
+.header__logo__img {
+  height: 100%;
+  width: 100%;
+}
+
+.header__mobile-nav__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+  .header__mobile-nav__toggle {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

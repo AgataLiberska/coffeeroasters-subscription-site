@@ -6,9 +6,10 @@
 @import 'base/variables';
 @import 'base/global';
 
+@import 'utilities/mixins';
+@import 'utilities/visibility';
+
+@import 'components/header';
+
 // @import 'utilities/*';
 // @import 'pages/*';
-
-
-// font-family: 'Barlow', sans-serif;
-// font-family: 'Fraunces', serif;
