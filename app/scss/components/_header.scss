@@ -1,8 +1,9 @@
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0.5rem 2.5rem 1.5rem;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
 
     @include breakpoint-up(medium) {
         padding-top: 2.5rem;
@@ -28,10 +29,35 @@
     padding: 1rem           ;
     border: 0;
     background: transparent;
-    cursor: pointer;
+    transform: translateX(1rem);
 
 
     @include breakpoint-up(medium) {
         display:none;
     }
+}
+
+.header__mobile-nav {
+    position: absolute;
+    height: 100vh;
+    top: 5.625rem;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient($lightCream 40%, $lightCreamGradient);
+}
+
+.header__mobile-nav__list {
+    list-style-type: none;
+    padding: 2.5rem 0;
+}
+
+.header__mobile-nav__link {
+    display: block;
+    padding-bottom: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $darkGreyBlue;
 }

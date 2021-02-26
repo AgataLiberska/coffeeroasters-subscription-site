@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="/app/css/styles.css">
   <title>Frontend Mentor | Coffeeroasters subscription site</title>
+
+  <script src="/app/js/script.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -17,11 +19,11 @@
     <button type="button" class="header__mobile-nav__toggle" aria-expanded="false" aria-label="Toggle Navigation">
       <img src="/assets/shared/mobile/icon-hamburger.svg" alt="">
     </button>
-    <nav class="header__mobile-nav hidden">
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/plan.html">Create Your Plan</a></li>
+    <nav class="header__mobile-nav">
+      <ul class="header__mobile-nav__list">
+        <li><a href="/index.html" class="header__mobile-nav__link">Home</a></li>
+        <li><a href="/about.html" class="header__mobile-nav__link">About Us</a></li>
+        <li><a href="/plan.html" class="header__mobile-nav__link">Create Your Plan</a></li>
       </ul>
     </nav>
   </header>
