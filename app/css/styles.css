@@ -101,6 +101,12 @@ body {
   }
 }
 
+@media (min-width: 90rem) {
+  .header {
+    padding: 2.75rem 5rem;
+  }
+}
+
 .header__logo {
   display: block;
   width: 10.25rem;

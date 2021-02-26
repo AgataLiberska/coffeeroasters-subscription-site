@@ -8,6 +8,10 @@
     @include breakpoint-up(medium) {
         padding: 1.5rem 2.5rem 2.5rem;
     }
+
+    @include breakpoint-up(large) {
+        padding: 2.75rem 5rem; 
+    }
 }
 
 .header__logo {
