@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap');
 
-
+@import 'utilities/mixins';
+@import 'utilities/visibility';
+@import 'utilities/animations';
+@import 'utilities/spacing';
 
 @import 'base/variables';
 @import 'base/global';
 
 @import 'components/buttons';
 
-@import 'utilities/mixins';
-@import 'utilities/visibility';
-@import 'utilities/animations';
-@import 'utilities/spacing';
-
 @import 'layout/header';
 
 @import 'modules/home/hero';
 @import 'modules/home/collection';
+@import 'modules/home/why-us';

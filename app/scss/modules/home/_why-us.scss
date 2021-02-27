@@ -1,0 +1,70 @@
+.why-us {
+    position: relative;
+    padding: 4rem 1.5rem 0;
+    text-align: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 62%;
+        border-radius: 0.625rem;
+        background-color: $darkGreyBlue;
+        z-index: -1;
+    }
+}
+
+.why-us__heading {
+    padding-bottom: 1.5rem;
+    font-family: $heading;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    color: $lightCream;
+}
+
+.why-us__tagline {
+    padding-bottom: 4rem;
+    color: $lightCream;
+}
+
+.why-us__benefits {
+    
+}
+
+.why-us__card {
+    padding-bottom: 3.25rem;
+    padding-top: 4.5rem;
+    border-radius: 0.5rem;
+    background-color: $darkCyan;
+
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.why-us__card__img {
+    margin-bottom: 3.5rem;
+}
+
+.why-us__card__icon {
+
+}
+
+.why-us__card__copy {
+
+}
+
+.why-us__card__heading {
+    padding-bottom: 1.5rem;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $lightCream;
+}
+
+.why-us__card__tagline {
+    padding: 0 2rem;
+    color: $lightCream;
+}
