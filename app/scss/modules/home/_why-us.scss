@@ -13,6 +13,10 @@
         border-radius: 0.625rem;
         background-color: $darkGreyBlue;
         z-index: -1;
+
+        @include breakpoint-up(medium) {
+            height: 68%;
+        }
     }
 }
 
@@ -25,8 +29,11 @@
 }
 
 .why-us__tagline {
+    max-width: 35rem;
+    margin: auto;
     padding-bottom: 4rem;
     color: $lightCream;
+
 }
 
 .why-us__benefits {
@@ -42,10 +49,22 @@
     &:not(:last-child) {
         margin-bottom: 1.5rem;
     }
+
+    @include breakpoint-up(medium) {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        padding: 2.5rem 0;
+    }
 }
 
 .why-us__card__img {
     margin-bottom: 3.5rem;
+
+    @include breakpoint-up(medium) {
+        margin: 0;
+        padding: 0 3.25rem 0 4.375rem;
+    }
 }
 
 .why-us__card__icon {
@@ -62,9 +81,21 @@
     font-size: 1.5rem;
     line-height: 2rem;
     color: $lightCream;
+
+    @include breakpoint-up(medium) {
+        padding-bottom: 1rem;
+    }
 }
 
 .why-us__card__tagline {
+    max-width: 26.25rem;
+    margin:auto;
     padding: 0 2rem;
     color: $lightCream;
+
+    @include breakpoint-up(medium) {
+        max-width: unset;
+        padding: 0;
+        padding-right: 3rem;
+    }
 }
