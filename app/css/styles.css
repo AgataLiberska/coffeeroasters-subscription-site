@@ -789,6 +789,13 @@ body {
   text-align: center;
 }
 
+@media (min-width: 48rem) {
+  .how-to {
+    padding: 0 2.5rem;
+    text-align: left;
+  }
+}
+
 .how-to__heading {
   padding-bottom: 5rem;
   font-family: "Fraunces", serif;
@@ -797,12 +804,62 @@ body {
   color: #83888f;
 }
 
+@media (min-width: 48rem) {
+  .how-to__heading {
+    padding-bottom: 3.5rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .how-to__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .how-to__step {
+  position: relative;
   padding-bottom: 3.5rem;
+}
+
+@media (min-width: 48rem) {
+  .how-to__step {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 12rem 6rem auto;
+        grid-template-rows: 12rem 6rem auto;
+    padding-right: 1rem;
+    padding-bottom: 2.75rem;
+  }
+  .how-to__step::before {
+    content: '';
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background: #fefcf7;
+    border: 2px solid #0e8784;
+    border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 48rem) {
+  .how-to__step:not(:last-of-type) {
+    border-top: 2px solid #fdd6ba;
+  }
 }
 
 .how-to__step:last-of-type {
   padding-bottom: 5rem;
+}
+
+@media (min-width: 48rem) {
+  .how-to__step:last-of-type {
+    padding-right: 0;
+    padding-bottom: 2.75rem;
+  }
 }
 
 .how-to__step-no {
@@ -812,6 +869,15 @@ body {
   font-size: 4.5rem;
   line-height: 4.5rem;
   color: #fdd6ba;
+}
+
+@media (min-width: 48rem) {
+  .how-to__step-no {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-bottom: 0;
+  }
 }
 
 .how-to__step__heading {
