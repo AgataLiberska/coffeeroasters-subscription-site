@@ -411,7 +411,7 @@ body {
   content: '';
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 2.5rem;
   right: 0;
   left: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(254, 252, 247, 0.0001)), to(#fefcf7));
