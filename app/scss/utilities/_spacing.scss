@@ -15,6 +15,7 @@
 }
 
 .m-x {
+    max-width: 80rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
 
@@ -24,13 +25,12 @@
     }
 
     @include breakpoint-up(large) {
-        margin-left: 5rem;
-        margin-right: 5rem;
+        margin: auto;
     }
 }
 
 .p-b-med {
-    padding-bottom: 9rem;
+    padding-bottom: 7.5rem;
 
     @include breakpoint-up(medium) {
         padding-bottom: 10.5rem;
@@ -38,7 +38,7 @@
 }
 
 .p-b-lg {
-    padding-bottom: 9rem;
+    padding-bottom: 7.5rem;
 
     @include breakpoint-up(medium) {
         padding-bottom: 12.5rem;

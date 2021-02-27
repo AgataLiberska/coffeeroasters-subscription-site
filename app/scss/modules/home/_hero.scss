@@ -1,0 +1,64 @@
+.hero {
+    max-width: 80rem;
+    margin-bottom: 7.5rem;
+    padding: 6.25rem 1rem;
+    background-image: url('/assets/home/mobile/image-hero-coffeepress.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.625rem;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 9rem;
+        padding: 6.5rem 14.5rem 6.5rem 3.625rem;
+        background-image: url('/assets/home/tablet/image-hero-coffeepress.jpg');
+        text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+        margin-bottom: 8.5rem;
+        padding: 7.25rem 43.875rem 7.25rem 5.25rem;
+        background-image: url('/assets/home/desktop/image-hero-coffeepress.jpg');
+    }
+}
+
+.hero__heading {
+    max-width: 23rem;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+    font-family: $heading;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: $lightCream;
+
+    @include breakpoint-up(medium) {
+        max-width: 28rem;
+        margin-left: 0;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+        max-width: 31rem;
+    }
+}
+
+.hero__tagline {
+    max-width: 23rem;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    color: $lightCream;
+    opacity: 0.8;
+
+    @include breakpoint-up(medium) {
+        max-width: 33rem;
+        margin-left: 0;
+    }
+
+    @include breakpoint-up(large) {
+        max-width: 26rem;
+        
+    }
+}
