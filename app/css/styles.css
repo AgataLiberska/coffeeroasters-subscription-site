@@ -136,6 +136,7 @@ html {
           box-sizing: border-box;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
+  color: #333d4b;
 }
 
 @media (min-width: 90rem) {
@@ -780,5 +781,48 @@ body {
   .why-us__card__tagline {
     padding: 0 3rem;
   }
+}
+
+.how-to {
+  margin-bottom: 7.5rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.how-to__heading {
+  padding-bottom: 5rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #83888f;
+}
+
+.how-to__step {
+  padding-bottom: 3.5rem;
+}
+
+.how-to__step:last-of-type {
+  padding-bottom: 5rem;
+}
+
+.how-to__step-no {
+  display: block;
+  padding-bottom: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  color: #fdd6ba;
+}
+
+.how-to__step__heading {
+  padding-bottom: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+.how-to__step__details {
+  max-width: 28rem;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=styles.css.map */
