@@ -8,7 +8,7 @@
         "../scss/utilities/_mixins.scss",
         "../scss/utilities/_visibility.scss",
         "../scss/utilities/_animations.scss",
-        "../scss/components/_header.scss"
+        "../scss/layout/_header.scss"
     ],
     "names": [],
     "file": "styles.css"
