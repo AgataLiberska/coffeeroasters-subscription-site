@@ -153,6 +153,12 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
+ol, ul {
+  list-style-type: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
 .button {
   display: inline-block;
   padding: 1rem 2rem;
