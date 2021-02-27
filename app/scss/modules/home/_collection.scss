@@ -1,4 +1,5 @@
 .collection {
+    position: relative;
     text-align: center;
 }
 
@@ -10,11 +11,17 @@
     line-height: 4.5rem;
     color: $grey;
 
+    @include breakpoint-up(medium) {
+        padding-bottom: 0;
+        font-size: 6rem;
+        line-height: 4.5rem;
+    }
+
     &::after {
         content: '';
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: -0.25rem;
         right: 0;
         left: 0;
         background-image: linear-gradient(rgba(254, 252, 247, 0.0001) 0%, $lightCream 100%);
@@ -22,10 +29,15 @@
 }
 
 .collection__list {
+    position: relative;
     display: flex;
     padding: 0 1.25rem;
     flex-direction: column;
     align-items: center;
+
+    @include breakpoint-up(medium) {
+        margin-top: -1.5rem;
+    }
 
     @include breakpoint-up(large) {
         flex-direction: row;
@@ -39,12 +51,25 @@
 
     &:not(:last-child) {
         padding-bottom: 3rem;
+
+        @include breakpoint-up(medium) {
+            padding-bottom: 2rem;
+        }
+    }
+
+    @include breakpoint-up(medium) {
+        flex-direction: row;
     }
 }
 
 .collection__item__pic {
     height: 9.5rem;
     margin-bottom: 1.5rem;
+
+    @include breakpoint-up(medium) {
+        height: 12rem;
+        margin-bottom: 0;
+    }
 }
 
 .collection__item__img {
@@ -55,7 +80,10 @@
 }
 
 .collection__item__info {
-
+    
+    @include breakpoint-up(medium) {
+        text-align: left;
+    }
 }
 
 .collection__item__heading {
@@ -64,9 +92,15 @@
     font-size: 1.5rem;
     line-height: 2rem;
     color: $darkGreyBlue;
+
+    @include breakpoint-up(medium) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }
 
 .collection__item__description {
+    max-width: 20rem;
     font-family: $body;
     font-size: 0.9375rem;
     line-height: 1.5625rem;
