@@ -19,6 +19,28 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #0e8784;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #fefcf7;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #66d2cf;
+}
+
+.button-disabled {
+  background-color: #e2dedb;
+}
+
 .hidden {
   display: none;
 }
@@ -81,6 +103,64 @@ body {
           animation: fade-out 200ms ease-in-out forwards;
 }
 
+.p-x {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .p-x {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .p-x {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.m-x {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .m-x {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .m-x {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+.p-b-med {
+  padding-bottom: 9rem;
+}
+
+@media (min-width: 48rem) {
+  .p-b-med {
+    padding-bottom: 10.5rem;
+  }
+}
+
+.p-b-lg {
+  padding-bottom: 9rem;
+}
+
+@media (min-width: 48rem) {
+  .p-b-lg {
+    padding-bottom: 12.5rem;
+  }
+}
+
 .header {
   position: relative;
   display: -webkit-box;
@@ -92,18 +172,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
 }
 
 @media (min-width: 48rem) {
   .header {
-    padding: 1.5rem 2.5rem 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
   }
 }
 
 @media (min-width: 90rem) {
   .header {
-    padding: 2.75rem 5rem;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
   }
 }
 

@@ -1,0 +1,20 @@
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: $darkCyan;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: $heading;
+    font-size: 1.125rem;
+    line-height: 1.5rem;                      
+    color: $lightCream;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        background-color: $cyan;
+    }   
+}
+
+.button-disabled {
+    background-color: $lightTaupe;
+}
