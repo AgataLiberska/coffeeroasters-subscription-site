@@ -401,15 +401,28 @@ body {
   }
 }
 
+@media (min-width: 90rem) {
+  .collection__heading {
+    font-size: 9.375rem;
+  }
+}
+
 .collection__heading::after {
   content: '';
   position: absolute;
   top: 0;
-  bottom: -0.25rem;
+  bottom: 0;
   right: 0;
   left: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(254, 252, 247, 0.0001)), to(#fefcf7));
   background-image: linear-gradient(rgba(254, 252, 247, 0.0001) 0%, #fefcf7 100%);
+}
+
+@media (min-width: 48rem) {
+  .collection__heading::after {
+    top: -6rem;
+    bottom: -2rem;
+  }
 }
 
 .collection__list {
@@ -439,6 +452,11 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: -1rem;
+    padding: 0 5.75rem;
   }
 }
 
@@ -462,12 +480,31 @@ body {
   }
 }
 
+@media (min-width: 90rem) {
+  .collection__item:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
 @media (min-width: 48rem) {
   .collection__item {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+}
+
+@media (min-width: 90rem) {
+  .collection__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 15.9375rem;
   }
 }
 
@@ -495,6 +532,12 @@ body {
   }
 }
 
+@media (min-width: 90rem) {
+  .collection__item__info {
+    text-align: center;
+  }
+}
+
 .collection__item__heading {
   padding-bottom: 1rem;
   font-family: "Fraunces", serif;
@@ -510,11 +553,24 @@ body {
   }
 }
 
+@media (min-width: 90rem) {
+  .collection__item__heading {
+    padding-top: 4.5rem;
+  }
+}
+
 .collection__item__description {
   max-width: 20rem;
   font-family: "Barlow", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
   color: #333d4b;
+}
+
+@media (min-width: 90rem) {
+  .collection__item__description {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
