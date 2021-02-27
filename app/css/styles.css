@@ -700,7 +700,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 4.5rem 3rem 3rem;
+    padding: 4.5rem 0 3rem;
   }
 }
 
@@ -728,8 +728,15 @@ body {
 
 @media (min-width: 64rem) {
   .why-us__card__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0;
-    height: 8rem;
+    margin-bottom: 3.5rem;
+    height: 4.5rem;
     text-align: center;
   }
 }
@@ -771,7 +778,7 @@ body {
 
 @media (min-width: 64rem) {
   .why-us__card__tagline {
-    padding: 0;
+    padding: 0 3rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
