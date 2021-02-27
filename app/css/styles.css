@@ -796,6 +796,20 @@ body {
   }
 }
 
+@media (min-width: 64rem) {
+  .how-to {
+    padding: 0 6rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .how-to {
+    max-width: 80rem;
+    margin: 0 auto 7.5rem;
+    padding: 0 5.25rem;
+  }
+}
+
 .how-to__heading {
   padding-bottom: 5rem;
   font-family: "Fraunces", serif;
@@ -810,6 +824,12 @@ body {
   }
 }
 
+@media (min-width: 64rem) {
+  .how-to__heading {
+    padding-bottom: 6rem;
+  }
+}
+
 @media (min-width: 48rem) {
   .how-to__info {
     display: -webkit-box;
@@ -821,6 +841,23 @@ body {
 .how-to__step {
   position: relative;
   padding-bottom: 3.5rem;
+}
+
+@media (min-width: 48rem) {
+  .how-to__step:not(:last-of-type) {
+    border-top: 2px solid #fdd6ba;
+  }
+}
+
+.how-to__step:last-of-type {
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 48rem) {
+  .how-to__step:last-of-type {
+    padding-right: 0;
+    padding-bottom: 2.75rem;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -845,20 +882,9 @@ body {
   }
 }
 
-@media (min-width: 48rem) {
-  .how-to__step:not(:last-of-type) {
-    border-top: 2px solid #fdd6ba;
-  }
-}
-
-.how-to__step:last-of-type {
-  padding-bottom: 5rem;
-}
-
-@media (min-width: 48rem) {
-  .how-to__step:last-of-type {
-    padding-right: 0;
-    padding-bottom: 2.75rem;
+@media (min-width: 64rem) {
+  .how-to__step {
+    padding-right: 6rem;
   }
 }
 
@@ -877,6 +903,7 @@ body {
         -ms-grid-row-align: center;
         align-self: center;
     padding-bottom: 0;
+    padding-top: 2rem;
   }
 }
 
@@ -885,6 +912,13 @@ body {
   font-family: "Fraunces", serif;
   font-size: 1.75rem;
   line-height: 2rem;
+}
+
+@media (min-width: 90rem) {
+  .how-to__step__heading {
+    font-family: 2rem;
+    line-height: 2.25rem;
+  }
 }
 
 .how-to__step__details {

@@ -7,6 +7,16 @@
         padding: 0 2.5rem;
         text-align: left;
     }
+
+    @include breakpoint-up(large) {
+        padding: 0 6rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        max-width: 80rem;
+        margin: 0 auto 7.5rem;
+        padding: 0 5.25rem;
+    }
 }
 
 .how-to__heading {
@@ -18,6 +28,10 @@
 
     @include breakpoint-up(medium) {
         padding-bottom: 3.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding-bottom: 6rem;
     }
 }
 
@@ -31,6 +45,21 @@
 .how-to__step {
     position: relative;
     padding-bottom: 3.5rem;
+
+    &:not(:last-of-type) {
+        @include breakpoint-up(medium) {
+            border-top: 2px solid $paleOrange;
+        }
+    }
+
+    &:last-of-type {
+        padding-bottom: 5rem;
+
+        @include breakpoint-up(medium) {
+            padding-right: 0;
+            padding-bottom: 2.75rem;
+        }
+    }
 
     @include breakpoint-up(medium) {
         display: grid;
@@ -50,19 +79,8 @@
         }
     }
 
-    &:not(:last-of-type) {
-        @include breakpoint-up(medium) {
-            border-top: 2px solid $paleOrange;
-        }
-    }
-
-    &:last-of-type {
-        padding-bottom: 5rem;
-
-        @include breakpoint-up(medium) {
-            padding-right: 0;
-            padding-bottom: 2.75rem;
-        }
+    @include breakpoint-up(large) {
+        padding-right: 6rem;
     }
 }
 
@@ -77,6 +95,7 @@
     @include breakpoint-up(medium) {
         align-self: center;
         padding-bottom:0;
+        padding-top: 2rem;
     }
 }
 
@@ -85,6 +104,11 @@
     font-family: $heading;
     font-size: 1.75rem;
     line-height: 2rem;
+
+    @include breakpoint-up(xlarge) {
+        font-family: 2rem;
+        line-height: 2.25rem;
+    }
 }
 
 .how-to__step__details {
