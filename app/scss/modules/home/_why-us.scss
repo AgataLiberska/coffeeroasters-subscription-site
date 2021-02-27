@@ -7,7 +7,7 @@
         padding: 3.5rem 3.5rem 0;
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         padding: 6.25rem 5.25rem 0;
     }
 
@@ -40,7 +40,7 @@
         line-height: 3rem;
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         padding-bottom: 2rem;
         font-size: 2.5rem;
     }
@@ -56,7 +56,7 @@
         padding-bottom: 4.375rem;
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         max-width: 33.75;
         padding-bottom: 5.375rem;
     }
@@ -66,7 +66,7 @@
     
     @include breakpoint-up(large) {
         display: flex;
-
+        flex-direction: row;
     }
 }
 
@@ -106,6 +106,7 @@
     @include breakpoint-up(medium) {
         margin: 0;
         padding: 0 3.25rem 0 4.375rem;
+
     }
 
     @include breakpoint-up(large) {

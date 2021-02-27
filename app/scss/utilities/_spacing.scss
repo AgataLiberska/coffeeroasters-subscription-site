@@ -8,7 +8,7 @@
         padding-right: 2.5rem;
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         padding-left: 5rem;
         padding-right: 5rem;
     }
@@ -24,7 +24,7 @@
         margin-right: 2.5rem;
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         margin: auto;
     }
 }
@@ -44,7 +44,7 @@
         margin-bottom: 9rem; //144px
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         margin-bottom: 12.5rem; //200px
     }
 }

@@ -11,7 +11,7 @@
         padding-bottom: 2.5rem
     }
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(xlarge) {
         max-width: 90rem;
         margin: auto;
         padding-top: 2.75rem; 
