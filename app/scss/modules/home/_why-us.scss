@@ -3,6 +3,14 @@
     padding: 4rem 1.5rem 0;
     text-align: center;
 
+    @include breakpoint-up(medium) {
+        padding: 3.5rem 3.5rem 0;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 6.25rem 5.25rem 0;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -26,6 +34,16 @@
     font-size: 1.75rem;
     line-height: 1.75rem;
     color: $lightCream;
+
+    @include breakpoint-up(medium) {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding-bottom: 2rem;
+        font-size: 2.5rem;
+    }
 }
 
 .why-us__tagline {
@@ -34,10 +52,22 @@
     padding-bottom: 4rem;
     color: $lightCream;
 
+    @include breakpoint-up(medium) {
+        padding-bottom: 4.375rem;
+    }
+
+    @include breakpoint-up(large) {
+        max-width: 33.75;
+        padding-bottom: 5.375rem;
+    }
 }
 
 .why-us__benefits {
     
+    @include breakpoint-up(large) {
+        display: flex;
+
+    }
 }
 
 .why-us__card {
@@ -46,15 +76,27 @@
     border-radius: 0.5rem;
     background-color: $darkCyan;
 
-    &:not(:last-child) {
-        margin-bottom: 1.5rem;
-    }
-
     @include breakpoint-up(medium) {
         display: flex;
         text-align: left;
         align-items: center;
         padding: 2.5rem 0;
+    }
+
+    @include breakpoint-up(large) {
+        flex-direction: column;
+        align-items: center;
+        padding: 4.5rem 3rem 3rem;
+
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 0;
+            margin-right: 1.875rem;
+        }
     }
 }
 
@@ -65,14 +107,25 @@
         margin: 0;
         padding: 0 3.25rem 0 4.375rem;
     }
+
+    @include breakpoint-up(large) {
+        padding: 0;
+        height: 8rem;
+        text-align: center;
+
+    }
 }
 
 .why-us__card__icon {
+    @include breakpoint-up(large) {
 
+    }
 }
 
 .why-us__card__copy {
-
+    @include breakpoint-up(large) {
+        text-align: center;
+    }
 }
 
 .why-us__card__heading {
@@ -97,5 +150,9 @@
         max-width: unset;
         padding: 0;
         padding-right: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 0;
     }
 }

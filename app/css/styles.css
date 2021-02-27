@@ -587,6 +587,18 @@ body {
   text-align: center;
 }
 
+@media (min-width: 48rem) {
+  .why-us {
+    padding: 3.5rem 3.5rem 0;
+  }
+}
+
+@media (min-width: 90rem) {
+  .why-us {
+    padding: 6.25rem 5.25rem 0;
+  }
+}
+
 .why-us::before {
   content: '';
   position: absolute;
@@ -613,6 +625,20 @@ body {
   color: #fefcf7;
 }
 
+@media (min-width: 48rem) {
+  .why-us__heading {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .why-us__heading {
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+}
+
 .why-us__tagline {
   max-width: 35rem;
   margin: auto;
@@ -620,15 +646,32 @@ body {
   color: #fefcf7;
 }
 
+@media (min-width: 48rem) {
+  .why-us__tagline {
+    padding-bottom: 4.375rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .why-us__tagline {
+    max-width: 33.75;
+    padding-bottom: 5.375rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .why-us__benefits {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .why-us__card {
   padding-bottom: 3.25rem;
   padding-top: 4.5rem;
   border-radius: 0.5rem;
   background-color: #0e8784;
-}
-
-.why-us__card:not(:last-child) {
-  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 48rem) {
@@ -644,6 +687,30 @@ body {
   }
 }
 
+@media (min-width: 90rem) {
+  .why-us__card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 4.5rem 3rem 3rem;
+  }
+}
+
+.why-us__card:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 90rem) {
+  .why-us__card:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 1.875rem;
+  }
+}
+
 .why-us__card__img {
   margin-bottom: 3.5rem;
 }
@@ -652,6 +719,20 @@ body {
   .why-us__card__img {
     margin: 0;
     padding: 0 3.25rem 0 4.375rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .why-us__card__img {
+    padding: 0;
+    height: 8rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 90rem) {
+  .why-us__card__copy {
+    text-align: center;
   }
 }
 
@@ -681,6 +762,12 @@ body {
     max-width: unset;
     padding: 0;
     padding-right: 3rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .why-us__card__tagline {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
