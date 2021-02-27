@@ -151,13 +151,19 @@ body {
   }
 }
 
-.p-b-lg {
-  padding-bottom: 7.5rem;
+.m-b-lg {
+  margin-bottom: 7.5rem;
 }
 
 @media (min-width: 48rem) {
-  .p-b-lg {
-    padding-bottom: 12.5rem;
+  .m-b-lg {
+    margin-bottom: 9rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .m-b-lg {
+    margin-bottom: 12.5rem;
   }
 }
 
@@ -371,5 +377,92 @@ body {
   .hero__tagline {
     max-width: 26rem;
   }
+}
+
+.collection {
+  text-align: center;
+}
+
+.collection__heading {
+  position: relative;
+  padding-bottom: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 2.25rem;
+  line-height: 4.5rem;
+  color: #83888f;
+}
+
+.collection__heading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(254, 252, 247, 0.0001)), to(#fefcf7));
+  background-image: linear-gradient(rgba(254, 252, 247, 0.0001) 0%, #fefcf7 100%);
+}
+
+.collection__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1.25rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 90rem) {
+  .collection__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.collection__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.collection__item:not(:last-child) {
+  padding-bottom: 3rem;
+}
+
+.collection__item__pic {
+  height: 9.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.collection__item__img {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+
+.collection__item__heading {
+  padding-bottom: 1rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #333d4b;
+}
+
+.collection__item__description {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  color: #333d4b;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -37,10 +37,14 @@
     }
 }
 
-.p-b-lg {
-    padding-bottom: 7.5rem;
+.m-b-lg {
+    margin-bottom: 7.5rem; //120px
 
     @include breakpoint-up(medium) {
-        padding-bottom: 12.5rem;
+        margin-bottom: 9rem; //144px
+    }
+
+    @include breakpoint-up(large) {
+        margin-bottom: 12.5rem; //200px
     }
 }
