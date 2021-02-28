@@ -159,6 +159,10 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Fraunces", serif;
+}
+
 ol, ul {
   list-style-type: none;
   -webkit-padding-start: 0;
@@ -263,7 +267,6 @@ ol, ul {
 
 @media (min-width: 90rem) {
   .header {
-    max-width: 90rem;
     margin: auto;
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
@@ -966,6 +969,69 @@ ol, ul {
   max-width: 26rem;
   color: #fefcf7;
   opacity: 0.8;
+}
+
+.about-commitment {
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .about-commitment {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1.2fr;
+        grid-template-columns: 1fr 1.2fr;
+    gap: 4.25rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-commitment {
+    padding: 5.3125rem;
+    -ms-grid-columns: 1fr 1.2fr;
+        grid-template-columns: 1fr 1.2fr;
+    gap: 7.75rem;
+  }
+}
+
+.about-commitment__img {
+  margin-bottom: 3rem;
+  height: 25rem;
+  width: 100%;
+  border-radius: 0.625rem;
+  background-image: url("/assets/about/mobile/image-commitment.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 48rem) {
+  .about-commitment__img {
+    height: 29.375rem;
+    margin-bottom: 0;
+    background-image: url("/assets/about/tablet/image-commitment.jpg");
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-commitment__img {
+    height: 32.5rem;
+    background-image: url("/assets/about/desktop/image-commitment.jpg");
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-commitment__copy {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+.about-commitment__headline {
+  padding-bottom: 1.875rem;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 .how-to {
