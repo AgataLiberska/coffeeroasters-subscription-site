@@ -17,7 +17,7 @@
         "../scss/modules/home/_collection.scss",
         "../scss/modules/home/_why-us.scss",
         "../scss/modules/about/_banner.scss",
-        "../scss/modules/about/_about.scss",
+        "../scss/modules/about/_commitment.scss",
         "../scss/modules/shared/_how-to.scss"
     ],
     "names": [],
