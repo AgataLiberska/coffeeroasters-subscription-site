@@ -1,0 +1,50 @@
+// padding - main container
+.p-x {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @include breakpoint-up(medium) {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+.m-x {
+    max-width: 80rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    @include breakpoint-up(medium) {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        margin: auto;
+    }
+}
+
+.p-b-med {
+    padding-bottom: 7.5rem;
+
+    @include breakpoint-up(medium) {
+        padding-bottom: 10.5rem;
+    }
+}
+
+.m-b-lg {
+    margin-bottom: 7.5rem; //120px
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 9rem; //144px
+    }
+
+    @include breakpoint-up(xlarge) {
+        margin-bottom: 12.5rem; //200px
+    }
+}

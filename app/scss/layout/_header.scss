@@ -1,0 +1,64 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+
+    @include breakpoint-up(medium) {
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem
+    }
+
+    @include breakpoint-up(xlarge) {
+        max-width: 90rem;
+        margin: auto;
+        padding-top: 2.75rem; 
+        padding-bottom: 2.75rem;
+    }
+}
+
+.header__logo {
+    display: block;
+    width: 10.25rem;
+
+    @include breakpoint-up(medium) {
+        width: 14.75rem;
+    }
+}
+
+.header__logo__img {
+    height: 100%;
+    width: 100%;
+}
+
+.header__nav {
+    display: none; 
+
+    @include breakpoint-up(medium) {
+        display: block;
+    }
+}
+
+.header__nav__item {
+    display: inline-block;
+}
+
+.header__nav__link {
+    display: block;
+    padding-left: 2rem;
+    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    color: $grey;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        color: $darkGreyBlue;
+    }
+}
+

@@ -1,0 +1,117 @@
+.how-to {
+    margin-bottom: 7.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        padding: 0 2.5rem;
+        text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 0 6rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        max-width: 80rem;
+        margin: 0 auto 7.5rem;
+        padding: 0 5.25rem;
+    }
+}
+
+.how-to__heading {
+    padding-bottom: 5rem;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $grey;
+
+    @include breakpoint-up(medium) {
+        padding-bottom: 3.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding-bottom: 6rem;
+    }
+}
+
+.how-to__info {
+
+    @include breakpoint-up(medium) {
+        display: flex;
+    }
+}
+
+.how-to__step {
+    position: relative;
+    padding-bottom: 3.5rem;
+
+    &:not(:last-of-type) {
+        @include breakpoint-up(medium) {
+            border-top: 2px solid $paleOrange;
+        }
+    }
+
+    &:last-of-type {
+        padding-bottom: 5rem;
+
+        @include breakpoint-up(medium) {
+            padding-right: 0;
+            padding-bottom: 2.75rem;
+        }
+    }
+
+    @include breakpoint-up(medium) {
+        display: grid;
+        grid-template-rows: 12rem 6rem auto;
+        padding-right: 1rem;
+        padding-bottom: 2.75rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            background: $lightCream;
+            border: 2px solid $darkCyan;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    @include breakpoint-up(large) {
+        padding-right: 6rem;
+    }
+}
+
+.how-to__step-no {
+    display: block;
+    padding-bottom: 1.5rem;
+    font-family: $heading;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    color: $paleOrange;
+
+    @include breakpoint-up(medium) {
+        align-self: center;
+        padding-bottom:0;
+        padding-top: 2rem;
+    }
+}
+
+.how-to__step__heading {
+    padding-bottom: 1.5rem;
+    font-family: $heading;
+    font-size: 1.75rem;
+    line-height: 2rem;
+
+    @include breakpoint-up(xlarge) {
+        font-family: 2rem;
+        line-height: 2.25rem;
+    }
+}
+
+.how-to__step__details {
+    max-width: 28rem;
+    margin: 0 auto;
+}

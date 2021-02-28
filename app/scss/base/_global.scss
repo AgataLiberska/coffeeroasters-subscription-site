@@ -5,11 +5,24 @@ html {
 *, *::before, *::after {
     margin: 0;
     box-sizing: border-box;
-    font-size: 1rem;
-    line-height: 1.625rem;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    color: $darkGreyBlue;
+
+    @include breakpoint-up(xlarge) {
+        font-size: 1rem;
+        line-height: 1.625rem;
+    }
 }
 
 body {
     margin: 0;
     padding: 0;
+    background-color: $lightCream;
+    font-family: $body;
+}
+
+ol, ul {
+    list-style-type: none;
+    padding-inline-start: 0;
 }

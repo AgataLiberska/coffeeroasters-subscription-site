@@ -1,0 +1,41 @@
+.mobile-nav {
+    position: absolute;
+    height: 100vh;
+    top: 5rem;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient($lightCream 35%, $lightCreamGradient);
+
+    @include breakpoint-up(medium) {
+        display: none;
+    }
+}
+
+.mobile-nav__toggle {
+    display: flex;
+    align-items: center;
+    padding: 1rem           ;
+    border: 0;
+    background: transparent;
+    transform: translateX(1rem);
+
+    @include breakpoint-up(medium) {
+        display:none;
+    }
+}
+
+.mobile-nav__list {
+    list-style-type: none;
+    padding: 2.5rem 0;
+}
+
+.mobile-nav__link {
+    display: block;
+    padding-bottom: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $darkGreyBlue;
+}
