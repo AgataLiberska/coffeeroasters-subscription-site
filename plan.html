@@ -65,24 +65,48 @@
       </li>
     </ol>
   </section>
+  <section class="create-plan m-x p-b-med">
+    <nav class="create-plan__nav">
+      <a href="#form-preferences">01 Preferences</a>
+      <a href="#form-bean-type">02 Bean type</a>
+      <a href="#form-quantity">03 Quantity</a>
+      <a href="#form-grind">04 Grind option</a>
+      <a href="#form-deliveries">05 Deliveries</a>
+    </nav>
+    <form class="create-plan__form">
+      <div class="create-plan__form__group">
+        <button type="button" id="form-preferences" aria-controls="coffee-option">
+          <span>How do you drink your coffee?</span>
+          <span><img src="/assets/plan/desktop/icon-arrow.svg" alt=""></span>
+        </button>
+        <div class="create-plan__form__options" id="coffee-option">
+          <div class="create-plan__form__control">
+            <label for="capsule" class="create-plan__form__label">Capsule</label>
+            <span class="create-plan__form__details">Compatible with Nespresso systems and similar brewers</span>
+            <input type="radio" name="preferences" value="capsule" id="capsule" class="create-plan__form__radio">
+          </div>
+          <div class="create-plan__form__control">
+            <label for="filter" class="create-plan__form__label">Filter</label>
+            <span class="create-plan__form__details">For pour over or drip methods like Aeropress, Chemex, and V60</span>
+            <input type="radio" name="preferences" value="filter" id="filter" class="create-plan__form__radio">
+          </div>
+          <div class="create-plan__form__control">
+            <label for="espresso" class="create-plan__form__label">Espresso</label>
+            <span class="create-plan__form__details">Dense and finely ground beans for an intense, flavorful experience</span>
+            <input type="radio" name="preferences" value="espresso" id="espresso" class="create-plan__form__radio">
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
 
+  
+  
 
-  01 Preferences
-  02 Bean type
-  03 Quantity
-  04 Grind option
-  05 Deliveries
-
-  How do you drink your coffee?
-
-  Capsule
-  Compatible with Nespresso systems and similar brewers
-
-  Filter
-  For pour over or drip methods like Aeropress, Chemex, and V60
+  
 
   Espresso
-  Dense and finely ground beans for an intense, flavorful experience
+  
 
   What type of coffee?
 
