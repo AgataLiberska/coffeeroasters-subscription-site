@@ -1329,7 +1329,7 @@ ol, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 0 0.5rem;
+  padding: 1rem 0;
   margin-bottom: 1rem;
   width: 100%;
   background-color: transparent;
@@ -1390,12 +1390,22 @@ ol, ul {
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   height: 0px;
   overflow: hidden;
   opacity: 0;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+}
+
+@media (min-width: 48rem) {
+  .create-plan__form__options {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 0.625rem;
+  }
 }
 
 .create-plan__form__label {
@@ -1413,6 +1423,13 @@ ol, ul {
 .create-plan__form__label:hover {
   background-color: #fdd6ba;
   cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+  .create-plan__form__label {
+    padding-top: 2rem;
+    padding-bottom: 5.25rem;
+  }
 }
 
 .create-plan__form__details {
