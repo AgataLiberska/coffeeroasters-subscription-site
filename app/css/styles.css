@@ -1334,6 +1334,14 @@ ol, ul {
   width: 100%;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.create-plan__group__toggle.is-open + .create-plan__form__options {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  opacity: 1;
 }
 
 .create-plan__group__toggle__label {
@@ -1352,12 +1360,28 @@ ol, ul {
   color: #333d4b;
 }
 
+.create-plan__group__toggle__icon {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.is-open .create-plan__group__toggle__icon {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
 .create-plan__form__options {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
+  margin-bottom: 6rem;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .create-plan__form__label {
@@ -1368,6 +1392,8 @@ ol, ul {
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
   line-height: 2rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .create-plan__form__label:hover {
