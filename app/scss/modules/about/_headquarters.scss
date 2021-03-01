@@ -1,0 +1,61 @@
+.about-headquarters {
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 0 5.3125rem;
+    }
+}
+
+.about-headquarters__heading {
+    padding-bottom: 4.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $grey;
+}
+
+.about-headquarters__container {
+    @include breakpoint-up(medium) {
+        display: flex;
+        
+    }
+}
+
+.about-headquarters__item {
+
+    &:not(:last-of-type) {
+        margin-bottom: 5rem;
+
+        @include breakpoint-up(medium) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint-up(medium) {
+        flex-grow: 1;
+    }
+}
+
+.about-headquarters__img {
+    display: inline-block;
+    padding-bottom: 3rem;
+}
+
+.about-headquarters__country {
+    padding-bottom: 1.25rem;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+}
+
+.about-headquarters__address {
+
+    & span {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-style: normal;
+    }
+}

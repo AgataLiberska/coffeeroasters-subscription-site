@@ -22,6 +22,12 @@ body {
     font-family: $body;
 }
 
+
+h1, h2, h3, h4 {
+    font-family: $heading;
+}
+
+
 ol, ul {
     list-style-type: none;
     padding-inline-start: 0;
