@@ -8,6 +8,7 @@
   <title>Coffeeroasters | Create your plan</title>
 
   <script src="/app/js/script.js" defer></script>
+  <script src="/app/js/create-plan.js" defer></script>
 </head>
 
 <body>
@@ -65,7 +66,7 @@
       </li>
     </ol>
   </section>
-  <section class="create-plan m-x p-b-med">
+  <section class="create-plan m-x m-b-med">
     <nav class="create-plan__nav">
       <a href="#form-preferences">01 Preferences</a>
       <a href="#form-bean-type">02 Bean type</a>
@@ -75,25 +76,22 @@
     </nav>
     <form class="create-plan__form">
       <div class="create-plan__form__group">
-        <button type="button" id="form-preferences" aria-controls="coffee-option">
-          <span>How do you drink your coffee?</span>
+        <button type="button" id="form-preferences" aria-controls="coffee-option" class="create-plan__group__toggle">
+          <span class="create-plan__group__toggle__label">How do you drink your coffee?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt=""></span>
         </button>
         <div class="create-plan__form__options" id="coffee-option">
-          <div class="create-plan__form__control">
-            <label for="capsule" class="create-plan__form__label">Capsule</label>
-            <span class="create-plan__form__details">Compatible with Nespresso systems and similar brewers</span>
-            <input type="radio" name="preferences" value="capsule" id="capsule" class="create-plan__form__radio">
+          <div class="create-plan__form__control--unselected" tabindex="0" aria-label="Select capsule">
+            <label for="capsule" class="create-plan__form__label" >Capsule<span class="create-plan__form__details">Compatible with Nespresso systems and similar brewers</span></label>
+            <input type="radio" name="preferences" value="capsule" id="capsule" class="create-plan__form__radio hidden-visually" tabindex="-1">
           </div>
-          <div class="create-plan__form__control">
-            <label for="filter" class="create-plan__form__label">Filter</label>
-            <span class="create-plan__form__details">For pour over or drip methods like Aeropress, Chemex, and V60</span>
-            <input type="radio" name="preferences" value="filter" id="filter" class="create-plan__form__radio">
+          <div class="create-plan__form__control--unselected" tabindex="0">
+            <label for="filter" class="create-plan__form__label">Filter<span class="create-plan__form__details">For pour over or drip methods like Aeropress, Chemex, and V60</span></label>
+            <input type="radio" name="preferences" value="filter" id="filter" class="create-plan__form__radio hidden-visually" tabindex="-1" >
           </div>
-          <div class="create-plan__form__control">
-            <label for="espresso" class="create-plan__form__label">Espresso</label>
-            <span class="create-plan__form__details">Dense and finely ground beans for an intense, flavorful experience</span>
-            <input type="radio" name="preferences" value="espresso" id="espresso" class="create-plan__form__radio">
+          <div class="create-plan__form__control--unselected" tabindex="0">
+            <label for="espresso" class="create-plan__form__label">Espresso <span class="create-plan__form__details">Dense and finely ground beans for an intense, flavorful experience</span></label>
+            <input type="radio" name="preferences" value="espresso" id="espresso" class="create-plan__form__radio hidden-visually" tabindex="-1">
           </div>
         </div>
       </div>
@@ -104,11 +102,9 @@
   
 
   
-
-  Espresso
   
 
-  What type of coffee?
+  <!-- What type of coffee?
 
   Single origin
   Distinct, high quality coffee from a specific family-owned farm
@@ -158,7 +154,7 @@
   Create my plan!
 
   <!-- Modal -->
-  Order Summary
+  <!-- Order Summary
 
   “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
   sent to me _____.”
@@ -169,7 +165,7 @@
   $_____/month
 
   Checkout
-  <!-- End modal -->
+  End modal --> 
 
   <footer class="footer m-x">
     <div class="footer__logo">

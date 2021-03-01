@@ -4,6 +4,17 @@
   display: none;
 }
 
+.hidden-visually {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
@@ -1302,6 +1313,91 @@ ol, ul {
   .plan-hero__tagline {
     padding-right: 0;
   }
+}
+
+.create-plan__nav {
+  display: none;
+}
+
+.create-plan__group__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.create-plan__group__toggle__label {
+  display: inline-block;
+  padding-right: 4rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #83888f;
+  text-align: left;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.create-plan__group__toggle__label:hover {
+  color: #333d4b;
+}
+
+.create-plan__form__options {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.create-plan__form__control--unselected {
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  background-color: #f4f1eb;
+}
+
+.create-plan__form__control--unselected:hover {
+  background-color: #fdd6ba;
+  cursor: pointer;
+}
+
+.create-plan__form__label {
+  display: block;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.create-plan__form__details {
+  display: block;
+  padding-top: 0.5rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.create-plan__form__control--selected {
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+  background-color: #0e8784;
+}
+
+.create-plan__form__control--selected .create-plan__form__label {
+  color: #fefcf7;
+}
+
+.create-plan__form__control--selected .create-plan__form__details {
+  color: #fefcf7;
 }
 
 .how-to {
