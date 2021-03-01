@@ -9,8 +9,10 @@
     }
 
     @include breakpoint-up(xlarge) {
-        padding-left: 5rem;
-        padding-right: 5rem;
+        max-width: 80rem;
+        margin: auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 

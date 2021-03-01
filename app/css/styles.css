@@ -76,8 +76,10 @@
 
 @media (min-width: 90rem) {
   .p-x {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    max-width: 80rem;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -267,7 +269,6 @@ ol, ul {
 
 @media (min-width: 90rem) {
   .header {
-    margin: auto;
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
   }
