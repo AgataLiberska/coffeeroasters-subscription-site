@@ -46,24 +46,20 @@
     gap: 1rem;
 }
 
-.create-plan__form__control--unselected {
+
+.create-plan__form__label {
+    display: block;
     padding: 1.5rem;
     border-radius: $border-radius;
     background-color: $cream;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
 
     &:hover {
         background-color: $paleOrange;
         cursor: pointer;
     }
-}
-
-
-
-.create-plan__form__label {
-    display: block;
-    font-family: $heading;
-    font-size: 1.5rem;
-    line-height: 2rem;
 }
 
 .create-plan__form__details {
@@ -75,19 +71,16 @@
 }
 
 .create-plan__form__radio {
-
-}
-
-.create-plan__form__control--selected {
-    padding: 1.5rem;
-    border-radius: $border-radius;
-    background-color: $darkCyan;
-    
-    .create-plan__form__label {
-        color: $lightCream;
+    &:focus + .create-plan__form__label {
+        background-color: $paleOrange;
     }
 
-    .create-plan__form__details {
+    &:checked + .create-plan__form__label {
+        background-color: $darkCyan;
         color: $lightCream;
+
+        & .create-plan__form__details {
+            color: $lightCream;
+        }
     }
 }

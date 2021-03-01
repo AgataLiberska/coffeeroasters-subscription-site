@@ -1360,22 +1360,19 @@ ol, ul {
   gap: 1rem;
 }
 
-.create-plan__form__control--unselected {
+.create-plan__form__label {
+  display: block;
   padding: 1.5rem;
   border-radius: 0.625rem;
   background-color: #f4f1eb;
-}
-
-.create-plan__form__control--unselected:hover {
-  background-color: #fdd6ba;
-  cursor: pointer;
-}
-
-.create-plan__form__label {
-  display: block;
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.create-plan__form__label:hover {
+  background-color: #fdd6ba;
+  cursor: pointer;
 }
 
 .create-plan__form__details {
@@ -1386,17 +1383,16 @@ ol, ul {
   line-height: 1.625rem;
 }
 
-.create-plan__form__control--selected {
-  padding: 1.5rem;
-  border-radius: 0.625rem;
-  background-color: #0e8784;
+.create-plan__form__radio:focus + .create-plan__form__label {
+  background-color: #fdd6ba;
 }
 
-.create-plan__form__control--selected .create-plan__form__label {
+.create-plan__form__radio:checked + .create-plan__form__label {
+  background-color: #0e8784;
   color: #fefcf7;
 }
 
-.create-plan__form__control--selected .create-plan__form__details {
+.create-plan__form__radio:checked + .create-plan__form__label .create-plan__form__details {
   color: #fefcf7;
 }
 

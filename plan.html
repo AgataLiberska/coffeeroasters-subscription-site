@@ -81,18 +81,18 @@
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt=""></span>
         </button>
         <div class="create-plan__form__options" id="coffee-option">
-          <div class="create-plan__form__control--unselected" tabindex="0" aria-label="Select capsule">
+          <div>
+            <input type="radio" name="preferences" value="capsule" id="capsule" class="create-plan__form__radio hidden-visually">
             <label for="capsule" class="create-plan__form__label" >Capsule<span class="create-plan__form__details">Compatible with Nespresso systems and similar brewers</span></label>
-            <input type="radio" name="preferences" value="capsule" id="capsule" class="create-plan__form__radio hidden-visually" tabindex="-1">
           </div>
-          <div class="create-plan__form__control--unselected" tabindex="0">
+          <div>
+            <input type="radio" name="preferences" value="filter" id="filter" class="create-plan__form__radio hidden-visually">
             <label for="filter" class="create-plan__form__label">Filter<span class="create-plan__form__details">For pour over or drip methods like Aeropress, Chemex, and V60</span></label>
-            <input type="radio" name="preferences" value="filter" id="filter" class="create-plan__form__radio hidden-visually" tabindex="-1" >
           </div>
-          <div class="create-plan__form__control--unselected" tabindex="0">
-            <label for="espresso" class="create-plan__form__label">Espresso <span class="create-plan__form__details">Dense and finely ground beans for an intense, flavorful experience</span></label>
-            <input type="radio" name="preferences" value="espresso" id="espresso" class="create-plan__form__radio hidden-visually" tabindex="-1">
-          </div>
+          <div>
+            <input type="radio" name="preferences" value="espresso" id="espresso" class="create-plan__form__radio hidden-visually">
+            <label for="espresso" class="create-plan__form__label">Espresso<span class="create-plan__form__details">Dense and finely ground beans for an intense, flavorful experience</span></label>
+            </div>
         </div>
       </div>
     </form>
