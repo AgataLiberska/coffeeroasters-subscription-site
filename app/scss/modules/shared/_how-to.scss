@@ -19,6 +19,31 @@
     }
 }
 
+.how-to--dark {
+    margin-bottom: 7.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-radius: $border-radius;
+    background-color: $darkGreyBlue;
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 9rem;
+        padding-top: 7rem;
+        padding-bottom: 6rem;
+    }
+
+    @include breakpoint-up(large) {
+        margin: 0 2.5rem 10.5rem;
+        padding: 7.25rem 5.3125rem 6.25rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        max-width: 80rem;
+        margin: 0 auto 10.5rem;
+        padding: 7.25rem 5.3125rem 6.25rem;
+    }
+}
+
 .how-to__heading {
     padding-bottom: 5rem;
     font-family: $heading;
@@ -44,20 +69,13 @@
 
 .how-to__step {
     position: relative;
-    padding-bottom: 3.5rem;
+    
 
     &:not(:last-of-type) {
+        padding-bottom: 3.5rem;
+
         @include breakpoint-up(medium) {
             border-top: 2px solid $paleOrange;
-        }
-    }
-
-    &:last-of-type {
-        padding-bottom: 5rem;
-
-        @include breakpoint-up(medium) {
-            padding-right: 0;
-            padding-bottom: 2.75rem;
         }
     }
 
@@ -66,6 +84,17 @@
         grid-template-rows: 12rem 6rem auto;
         padding-right: 1rem;
         padding-bottom: 2.75rem;
+
+    }
+
+    @include breakpoint-up(large) {
+        padding-right: 6rem;
+    }
+}
+
+.how-to--light__step {
+
+    @include breakpoint-up(medium) {
 
         &::before {
             content: '';
@@ -79,8 +108,31 @@
         }
     }
 
-    @include breakpoint-up(large) {
-        padding-right: 6rem;
+
+    &:last-of-type {
+        padding-bottom: 5rem;
+
+        @include breakpoint-up(medium) {
+            padding-right: 0;
+            padding-bottom: 2.75rem;
+
+
+        }
+    }
+}
+
+.how-to--dark__step {
+    @include breakpoint-up(medium) {
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2rem;
+            width: 2rem;
+            background: $darkGreyBlue;
+            border: 2px solid $darkCyan;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
 
@@ -111,7 +163,15 @@
     }
 }
 
+.how-to--dark__step__heading {
+    color: $lightCream;
+}
+
 .how-to__step__details {
     max-width: 28rem;
     margin: 0 auto;
+}
+
+.how-to--dark__step__details {
+    color: $lightCream;
 }

@@ -1330,6 +1330,37 @@ ol, ul {
   }
 }
 
+.how-to--dark {
+  margin-bottom: 7.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-radius: 0.625rem;
+  background-color: #333d4b;
+}
+
+@media (min-width: 48rem) {
+  .how-to--dark {
+    margin-bottom: 9rem;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .how-to--dark {
+    margin: 0 2.5rem 10.5rem;
+    padding: 7.25rem 5.3125rem 6.25rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .how-to--dark {
+    max-width: 80rem;
+    margin: 0 auto 10.5rem;
+    padding: 7.25rem 5.3125rem 6.25rem;
+  }
+}
+
 .how-to__heading {
   padding-bottom: 5rem;
   font-family: "Fraunces", serif;
@@ -1360,23 +1391,15 @@ ol, ul {
 
 .how-to__step {
   position: relative;
+}
+
+.how-to__step:not(:last-of-type) {
   padding-bottom: 3.5rem;
 }
 
 @media (min-width: 48rem) {
   .how-to__step:not(:last-of-type) {
     border-top: 2px solid #fdd6ba;
-  }
-}
-
-.how-to__step:last-of-type {
-  padding-bottom: 5rem;
-}
-
-@media (min-width: 48rem) {
-  .how-to__step:last-of-type {
-    padding-right: 0;
-    padding-bottom: 2.75rem;
   }
 }
 
@@ -1389,7 +1412,16 @@ ol, ul {
     padding-right: 1rem;
     padding-bottom: 2.75rem;
   }
-  .how-to__step::before {
+}
+
+@media (min-width: 64rem) {
+  .how-to__step {
+    padding-right: 6rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .how-to--light__step::before {
     content: '';
     position: absolute;
     height: 2rem;
@@ -1402,9 +1434,28 @@ ol, ul {
   }
 }
 
-@media (min-width: 64rem) {
-  .how-to__step {
-    padding-right: 6rem;
+.how-to--light__step:last-of-type {
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 48rem) {
+  .how-to--light__step:last-of-type {
+    padding-right: 0;
+    padding-bottom: 2.75rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .how-to--dark__step::before {
+    content: '';
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background: #333d4b;
+    border: 2px solid #0e8784;
+    border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 
@@ -1441,8 +1492,16 @@ ol, ul {
   }
 }
 
+.how-to--dark__step__heading {
+  color: #fefcf7;
+}
+
 .how-to__step__details {
   max-width: 28rem;
   margin: 0 auto;
+}
+
+.how-to--dark__step__details {
+  color: #fefcf7;
 }
 /*# sourceMappingURL=styles.css.map */
