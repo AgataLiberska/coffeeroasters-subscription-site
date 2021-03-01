@@ -1329,12 +1329,25 @@ ol, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
-  margin-bottom: 1.5rem;
+  padding: 0 0 0.5rem;
+  margin-bottom: 1rem;
   width: 100%;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.create-plan__group__toggle:focus {
+  outline: none;
+  border-bottom: 1px solid #83888f;
+}
+
+.create-plan__group__toggle:focus .create-plan__group__toggle__label {
+  color: #333d4b;
+}
+
+.create-plan__group__toggle:hover .create-plan__group__toggle__label {
+  color: #333d4b;
 }
 
 .create-plan__group__toggle.is-open + .create-plan__form__options {
@@ -1352,8 +1365,8 @@ ol, ul {
   line-height: 1.75rem;
   color: #83888f;
   text-align: left;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .create-plan__group__toggle__label:hover {

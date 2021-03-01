@@ -18,12 +18,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
-    margin-bottom: 1.5rem;
+    padding: 0 0 0.5rem;
+    margin-bottom: 1rem;
     width: 100%;
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    &:focus  {
+        outline: none;
+        border-bottom: 1px solid $grey;
+
+        & .create-plan__group__toggle__label {
+            color: $darkGreyBlue;
+        }
+    }
+
+    &:hover {
+        & .create-plan__group__toggle__label {
+            color: $darkGreyBlue;
+        }
+    }
 
     &.is-open + .create-plan__form__options {
         height: max-content;
@@ -39,7 +54,7 @@
     line-height: 1.75rem;
     color: $grey;
     text-align: left;
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
 
     &:hover {
         color: $darkGreyBlue;
@@ -89,6 +104,8 @@
     font-size: 1rem;
     line-height: 1.625rem;
 }
+
+// focus styles for radio input
 
 .create-plan__form__radio {
     &:focus + .create-plan__form__label {
