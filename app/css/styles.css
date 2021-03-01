@@ -1166,6 +1166,18 @@ ol, ul {
   text-align: center;
 }
 
+@media (min-width: 48rem) {
+  .about-headquarters {
+    text-align: left;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-headquarters {
+    padding: 0 5.3125rem;
+  }
+}
+
 .about-headquarters__heading {
   padding-bottom: 4.5rem;
   font-size: 1.5rem;
@@ -1173,8 +1185,30 @@ ol, ul {
   color: #83888f;
 }
 
+@media (min-width: 48rem) {
+  .about-headquarters__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .about-headquarters__item:not(:last-of-type) {
   margin-bottom: 5rem;
+}
+
+@media (min-width: 48rem) {
+  .about-headquarters__item:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 48rem) {
+  .about-headquarters__item {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .about-headquarters__img {

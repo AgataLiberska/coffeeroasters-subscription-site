@@ -1,5 +1,13 @@
 .about-headquarters {
     text-align: center;
+
+    @include breakpoint-up(medium) {
+        text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 0 5.3125rem;
+    }
 }
 
 .about-headquarters__heading {
@@ -9,10 +17,25 @@
     color: $grey;
 }
 
+.about-headquarters__container {
+    @include breakpoint-up(medium) {
+        display: flex;
+        
+    }
+}
+
 .about-headquarters__item {
 
     &:not(:last-of-type) {
         margin-bottom: 5rem;
+
+        @include breakpoint-up(medium) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint-up(medium) {
+        flex-grow: 1;
     }
 }
 
