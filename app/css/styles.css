@@ -1354,6 +1354,7 @@ ol, ul {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  padding-bottom: 6rem;
   opacity: 1;
 }
 
@@ -1389,7 +1390,7 @@ ol, ul {
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
-  margin-bottom: 6rem;
+  padding-bottom: 3rem;
   height: 0px;
   overflow: hidden;
   opacity: 0;

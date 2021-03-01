@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,16 +84,96 @@
         </button>
         <div class="create-plan__form__options" id="coffee-option">
           <div>
-            <input type="radio" name="preferences" value="capsule" id="capsule" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="preferences" value="Capsule" id="capsule" class="create-plan__form__radio hidden-visually">
             <label for="capsule" class="create-plan__form__label" >Capsule<span class="create-plan__form__details">Compatible with Nespresso systems and similar brewers</span></label>
           </div>
           <div>
-            <input type="radio" name="preferences" value="filter" id="filter" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="preferences" value="Filter" id="filter" class="create-plan__form__radio hidden-visually">
             <label for="filter" class="create-plan__form__label">Filter<span class="create-plan__form__details">For pour over or drip methods like Aeropress, Chemex, and V60</span></label>
           </div>
           <div>
-            <input type="radio" name="preferences" value="espresso" id="espresso" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="preferences" value="Espresso" id="espresso" class="create-plan__form__radio hidden-visually">
             <label for="espresso" class="create-plan__form__label">Espresso<span class="create-plan__form__details">Dense and finely ground beans for an intense, flavorful experience</span></label>
+            </div>
+        </div>
+      </div>
+      <div class="create-plan__form__group">
+        <button type="button" id="form-bean-type" aria-controls="bean-type" class="create-plan__group__toggle js-accordion-toggle">
+          <span class="create-plan__group__toggle__label">What type of coffee?</span>
+          <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
+        </button>
+        <div class="create-plan__form__options" id="bean-type">
+          <div>
+            <input type="radio" name="bean-type" value="Single origin" id="single-origin" class="create-plan__form__radio hidden-visually">
+            <label for="single-origin" class="create-plan__form__label" >Single origin<span class="create-plan__form__details">Distinct, high quality coffee from a specific family-owned farm</span></label>
+          </div>
+          <div>
+            <input type="radio" name="bean-type" value="Decaf" id="decaf" class="create-plan__form__radio hidden-visually">
+            <label for="decaf" class="create-plan__form__label">Decaf<span class="create-plan__form__details">Just like regular coffee, except the caffeine has been removed</span></label>
+          </div>
+          <div>
+            <input type="radio" name="bean-type" value="Blended" id="blended" class="create-plan__form__radio hidden-visually">
+            <label for="blended" class="create-plan__form__label">Blended<span class="create-plan__form__details">Combination of two or three dark roasted beans of organic coffees</span></label>
+            </div>
+        </div>
+      </div>
+      <div class="create-plan__form__group">
+        <button type="button" id="form-quantity" aria-controls="coffee-quantity" class="create-plan__group__toggle js-accordion-toggle">
+          <span class="create-plan__group__toggle__label">How much would you like?</span>
+          <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
+        </button>
+        <div class="create-plan__form__options" id="coffee-quantity">
+          <div>
+            <input type="radio" name="quantity" value="250g" id="250g" class="create-plan__form__radio hidden-visually">
+            <label for="250g" class="create-plan__form__label" >250g<span class="create-plan__form__details">Perfect for the solo drinker. Yields about 12 delicious cups.</span></label>
+          </div>
+          <div>
+            <input type="radio" name="quantity" value="500g" id="500g" class="create-plan__form__radio hidden-visually">
+            <label for="500g" class="create-plan__form__label">500g<span class="create-plan__form__details">Perfect option for a couple. Yields about 40 delectable cups.</span></label>
+          </div>
+          <div>
+            <input type="radio" name="quantity" value="1000g" id="1000g" class="create-plan__form__radio hidden-visually">
+            <label for="1000g" class="create-plan__form__label">1000g<span class="create-plan__form__details">Perfect for offices and events. Yields about 90 delightful cups.</span></label>
+            </div>
+        </div>
+      </div>
+      <div class="create-plan__form__group">
+        <button type="button" id="form-grind" aria-controls="grind" class="create-plan__group__toggle js-accordion-toggle">
+          <span class="create-plan__group__toggle__label">Want us to grind them?</span>
+          <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
+        </button>
+        <div class="create-plan__form__options" id="grind">
+          <div>
+            <input type="radio" name="grind" value="Wholebean" id="wholebean" class="create-plan__form__radio hidden-visually">
+            <label for="wholebean" class="create-plan__form__label" >Wholebean<span class="create-plan__form__details">Best choice if you cherish the full sensory experience</span></label>
+          </div>
+          <div>
+            <input type="radio" name="grind" value="Filter" id="filter" class="create-plan__form__radio hidden-visually">
+            <label for="filter" class="create-plan__form__label">Filter<span class="create-plan__form__details">For drip or pour-over coffee methods such as V60 or Aeropress</span></label>
+          </div>
+          <div>
+            <input type="radio" name="grind" value="Cafetiére" id="cafetiere" class="create-plan__form__radio hidden-visually">
+            <label for="cafetiere" class="create-plan__form__label">Cafetiére<span class="create-plan__form__details">Course ground beans specially suited for french press coffee</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="create-plan__form__group">
+        <button type="button" id="form-delivery" aria-controls="delivery" class="create-plan__group__toggle js-accordion-toggle">
+          <span class="create-plan__group__toggle__label">How often should we deliver?</span>
+          <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
+        </button>
+        <div class="create-plan__form__options" id="delivery">
+          <div>
+            <input type="radio" name="delivery" value="Every Week" id="every-week" class="create-plan__form__radio hidden-visually">
+            <label for="every-week" class="create-plan__form__label" >Every week<span class="create-plan__form__details">$14.00 per shipment. Includes free first-class shipping.</span></label>
+          </div>
+          <div>
+            <input type="radio" name="delivery" value="Every 2 Weeks" id="every-2-weeks" class="create-plan__form__radio hidden-visually">
+            <label for="every-2-weeks" class="create-plan__form__label">Every 2 weeks<span class="create-plan__form__details">$17.25 per shipment. Includes free priority shipping.</span></label>
+          </div>
+          <div>
+            <input type="radio" name="delivery" value="Every Month" id="every-month" class="create-plan__form__radio hidden-visually">
+            <label for="every-month" class="create-plan__form__label">Every month<span class="create-plan__form__details">$22.50 per shipment. Includes free priority shipping.</span></label>
             </div>
         </div>
       </div>
@@ -99,53 +181,9 @@
   </section>
 
   
-  
+    <!-- 
 
-  
-  
-
-  <!-- What type of coffee?
-
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
-
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
-
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
-
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-  
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
+ 
 
   Order Summary
   “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 

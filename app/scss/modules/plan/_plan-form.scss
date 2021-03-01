@@ -42,6 +42,7 @@
 
     &.is-open + .create-plan__form__options {
         height: max-content;
+        padding-bottom: 6rem;
         opacity: 1;
     }
 }
@@ -73,7 +74,7 @@
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
-    margin-bottom: 6rem;
+    padding-bottom: 3rem;
     height: 0px;
     overflow: hidden;
     opacity: 0;
