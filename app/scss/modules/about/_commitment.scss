@@ -9,7 +9,7 @@
     }
 
     @include breakpoint-up(large) {
-        padding: 5.3125rem;
+        padding: 0 5.3125rem;
         grid-template-columns: 1fr 1.2fr;
         gap: 7.75rem;
     }

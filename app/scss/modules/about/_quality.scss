@@ -1,0 +1,100 @@
+.about-quality {
+    position: relative;
+    padding: 0 1.5rem 3.75rem 1.5rem;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        padding: 0 3.5rem 4.25rem 3.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0 5.3125rem 5.5rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 88%;
+        border-radius: $border-radius;
+        background-color: $darkGreyBlue;
+        z-index: -1;
+
+        @include breakpoint-up(medium) {
+            height: 76%;
+        }
+
+        @include breakpoint-up(large) {
+            height: 86%;
+        }
+    }
+}
+
+.about-quality__img {
+    display: block;
+    margin: auto;
+    height: 9.75rem;
+    max-width: 21rem;
+    margin-bottom: 4rem;
+    border-radius: $border-radius;
+    background-image: url('/assets/about/mobile/image-quality.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include breakpoint-up(medium) {
+        height: 20rem;
+        max-width: 40rem;
+        background-image: url('/assets/about/tablet/image-quality.jpg');
+    }
+
+    @include breakpoint-up(large) {
+        margin: 0;
+        height: 29.625rem;
+        max-width: unset;
+        width: 27.8125rem;
+    }
+}
+
+.about-quality__copy {
+    @include breakpoint-up(large) {
+        padding-top: 11rem;
+        padding-right: 6rem;
+        max-width: 31rem;
+        text-align: left;
+    }
+
+    @include breakpoint-up(xlarge) {
+        max-width: 33.75rem;
+    }
+}
+
+.about-quality__heading {
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: $lightCream;
+
+    @include breakpoint-down(xsmall) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+.about-quality__text {
+    color: $lightCream;
+    opacity: 0.8;
+
+    @include breakpoint-up(medium) {
+        padding: 0 0.875rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 0;
+    }
+}

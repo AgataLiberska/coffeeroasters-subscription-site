@@ -7,3 +7,12 @@ $breakpoints-up: ("medium" : "48rem", "large" : "64rem","xlarge" : "90rem");
         @content;
     }
 }
+
+//374px 
+$breakpoints-down: ("xsmall" : "23.375rem");
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size )) {
+        @content;
+    }
+}

@@ -988,7 +988,7 @@ ol, ul {
 
 @media (min-width: 64rem) {
   .about-commitment {
-    padding: 5.3125rem;
+    padding: 0 5.3125rem;
     -ms-grid-columns: 1fr 1.2fr;
         grid-template-columns: 1fr 1.2fr;
     gap: 7.75rem;
@@ -1032,6 +1032,134 @@ ol, ul {
   padding-bottom: 1.875rem;
   font-size: 2rem;
   line-height: 3rem;
+}
+
+.about-quality {
+  position: relative;
+  padding: 0 1.5rem 3.75rem 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .about-quality {
+    padding: 0 3.5rem 4.25rem 3.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-quality {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 5.3125rem 5.5rem;
+  }
+}
+
+.about-quality::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 88%;
+  border-radius: 0.625rem;
+  background-color: #333d4b;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  .about-quality::before {
+    height: 76%;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-quality::before {
+    height: 86%;
+  }
+}
+
+.about-quality__img {
+  display: block;
+  margin: auto;
+  height: 9.75rem;
+  max-width: 21rem;
+  margin-bottom: 4rem;
+  border-radius: 0.625rem;
+  background-image: url("/assets/about/mobile/image-quality.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 48rem) {
+  .about-quality__img {
+    height: 20rem;
+    max-width: 40rem;
+    background-image: url("/assets/about/tablet/image-quality.jpg");
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-quality__img {
+    margin: 0;
+    height: 29.625rem;
+    max-width: unset;
+    width: 27.8125rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-quality__copy {
+    padding-top: 11rem;
+    padding-right: 6rem;
+    max-width: 31rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 90rem) {
+  .about-quality__copy {
+    max-width: 33.75rem;
+  }
+}
+
+.about-quality__heading {
+  padding-bottom: 1.5rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #fefcf7;
+}
+
+@media (max-width: 23.375rem) {
+  .about-quality__heading {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.about-quality__text {
+  color: #fefcf7;
+  opacity: 0.8;
+}
+
+@media (min-width: 48rem) {
+  .about-quality__text {
+    padding: 0 0.875rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-quality__text {
+    padding: 0;
+  }
 }
 
 .how-to {
