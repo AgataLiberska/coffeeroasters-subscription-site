@@ -1,0 +1,38 @@
+.about-headquarters {
+    text-align: center;
+}
+
+.about-headquarters__heading {
+    padding-bottom: 4.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $grey;
+}
+
+.about-headquarters__item {
+
+    &:not(:last-of-type) {
+        margin-bottom: 5rem;
+    }
+}
+
+.about-headquarters__img {
+    display: inline-block;
+    padding-bottom: 3rem;
+}
+
+.about-headquarters__country {
+    padding-bottom: 1.25rem;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+}
+
+.about-headquarters__address {
+
+    & span {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-style: normal;
+    }
+}
