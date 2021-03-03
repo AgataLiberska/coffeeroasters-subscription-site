@@ -186,6 +186,7 @@ ol, ul {
   display: inline-block;
   padding: 1rem 2rem;
   background-color: #0e8784;
+  border: 0;
   border-radius: 0.5rem;
   text-decoration: none;
   font-family: "Fraunces", serif;
@@ -201,6 +202,12 @@ ol, ul {
 }
 
 .button-disabled {
+  border: 0;
+  background-color: #e2dedb;
+  cursor: not-allowed;
+}
+
+.button-disabled:hover {
   background-color: #e2dedb;
 }
 
@@ -1533,6 +1540,7 @@ ol, ul {
 }
 
 .create-plan__order-summary {
+  margin-bottom: 3.5rem;
   padding: 2rem 1.5rem;
   border-radius: 0.625rem;
   background-color: #333d4b;
@@ -1574,6 +1582,17 @@ ol, ul {
   line-height: 3rem;
   color: #0e8784;
   text-transform: capitalize;
+}
+
+.create-plan__form__submit {
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 64rem) {
+  .create-plan__form__submit {
+    margin-right: 0;
+  }
 }
 
 .how-to {

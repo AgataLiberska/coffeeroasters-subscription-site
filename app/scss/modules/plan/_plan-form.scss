@@ -200,8 +200,9 @@
     }
 }
 
-// order summary
+// order summary ---------------------------
 .create-plan__order-summary {
+    margin-bottom: 3.5rem;
     padding: 2rem 1.5rem;
     border-radius: $border-radius;
     background-color: $darkGreyBlue;
@@ -243,4 +244,15 @@
     line-height: 3rem;
     color: $darkCyan;
     text-transform: capitalize;
+}
+
+
+// submit button -------------------------------
+.create-plan__form__submit {
+    display: block;
+    margin: auto;
+
+    @include breakpoint-up(large) {
+        margin-right: 0;
+    }
 }
