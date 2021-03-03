@@ -1404,11 +1404,11 @@ ol, ul {
   border-bottom: 1px solid #83888f;
 }
 
-.create-plan__group__toggle:focus .create-plan__group__toggle__label {
+.create-plan__group__toggle:focus > .create-plan__group__toggle__text {
   color: #333d4b;
 }
 
-.create-plan__group__toggle:hover .create-plan__group__toggle__label {
+.create-plan__group__toggle:hover .create-plan__group__toggle__text {
   color: #333d4b;
 }
 

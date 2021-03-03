@@ -73,13 +73,13 @@
         outline: none;
         border-bottom: 1px solid $grey;
 
-        & .create-plan__group__toggle__label {
+        & >.create-plan__group__toggle__text {
             color: $darkGreyBlue;
         }
     }
 
     &:hover {
-        & .create-plan__group__toggle__label {
+        & .create-plan__group__toggle__text {
             color: $darkGreyBlue;
         }
     }

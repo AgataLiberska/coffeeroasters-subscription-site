@@ -78,23 +78,23 @@
     </nav>
     <form class="create-plan__form">
       <div class="create-plan__form__group">
-        <button type="button" id="form-preferences" aria-controls="coffee-option" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
+        <button type="button" id="form-preferences" aria-controls="coffee-preferences" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
           <span class="create-plan__group__toggle__text">How do you drink your coffee?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
         </button>
-        <div class="create-plan__form__options" id="coffee-option">
+        <div class="create-plan__form__options" id="coffee-preferences">
           <div>
-            <input type="radio" name="preferences" value="Capsule" id="capsule" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="preferences" value="capsules" id="capsule" class="create-plan__form__radio js-capsule hidden-visually">
             <label for="capsule" class="create-plan__form__label" >Capsule<span class="create-plan__form__details">Compatible with Nespresso systems and similar brewers</span></label>
           </div>
           <div>
-            <input type="radio" name="preferences" value="Filter" id="filter" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="preferences" value="filter" id="filter" class="create-plan__form__radio hidden-visually">
             <label for="filter" class="create-plan__form__label">Filter<span class="create-plan__form__details">For pour over or drip methods like Aeropress, Chemex, and V60</span></label>
           </div>
           <div>
-            <input type="radio" name="preferences" value="Espresso" id="espresso" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="preferences" value="espresso" id="espresso" class="create-plan__form__radio hidden-visually">
             <label for="espresso" class="create-plan__form__label">Espresso<span class="create-plan__form__details">Dense and finely ground beans for an intense, flavorful experience</span></label>
-            </div>
+          </div>
         </div>
       </div>
       <div class="create-plan__form__group">
@@ -104,17 +104,17 @@
         </button>
         <div class="create-plan__form__options" id="bean-type">
           <div>
-            <input type="radio" name="bean-type" value="Single origin" id="single-origin" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="bean-type" value="single origin" id="single-origin" class="create-plan__form__radio hidden-visually">
             <label for="single-origin" class="create-plan__form__label" >Single origin<span class="create-plan__form__details">Distinct, high quality coffee from a specific family-owned farm</span></label>
           </div>
           <div>
-            <input type="radio" name="bean-type" value="Decaf" id="decaf" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="bean-type" value="decaf" id="decaf" class="create-plan__form__radio hidden-visually">
             <label for="decaf" class="create-plan__form__label">Decaf<span class="create-plan__form__details">Just like regular coffee, except the caffeine has been removed</span></label>
           </div>
           <div>
-            <input type="radio" name="bean-type" value="Blended" id="blended" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="bean-type" value="blended" id="blended" class="create-plan__form__radio hidden-visually">
             <label for="blended" class="create-plan__form__label">Blended<span class="create-plan__form__details">Combination of two or three dark roasted beans of organic coffees</span></label>
-            </div>
+          </div>
         </div>
       </div>
       <div class="create-plan__form__group">
@@ -134,26 +134,26 @@
           <div>
             <input type="radio" name="quantity" value="1000g" id="1000g" class="create-plan__form__radio hidden-visually">
             <label for="1000g" class="create-plan__form__label">1000g<span class="create-plan__form__details">Perfect for offices and events. Yields about 90 delightful cups.</span></label>
-            </div>
+          </div>
         </div>
       </div>
       <div class="create-plan__form__group">
-        <button type="button" id="form-grind" aria-controls="grind" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
+        <button type="button" id="form-grind" aria-controls="grind" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle js-grind-toggle">
           <span class="create-plan__group__toggle__text">Want us to grind them?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
         </button>
         <div class="create-plan__form__options" id="grind">
           <div>
-            <input type="radio" name="grind" value="Wholebean" id="wholebean" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="grind" value="wholebean" id="wholebean" class="create-plan__form__radio hidden-visually js-grind-input">
             <label for="wholebean" class="create-plan__form__label" >Wholebean<span class="create-plan__form__details">Best choice if you cherish the full sensory experience</span></label>
           </div>
           <div>
-            <input type="radio" name="grind" value="Filter" id="filter" class="create-plan__form__radio hidden-visually">
-            <label for="filter" class="create-plan__form__label">Filter<span class="create-plan__form__details">For drip or pour-over coffee methods such as V60 or Aeropress</span></label>
+            <input type="radio" name="grind" value="filter" id="filter-grind" class="create-plan__form__radio hidden-visually js-grind-input">
+            <label for="filter-grind" class="create-plan__form__label">Filter<span class="create-plan__form__details">For drip or pour-over coffee methods such as V60 or Aeropress</span></label>
           </div>
           <div>
-            <input type="radio" name="grind" value="Cafetiére" id="cafetiere" class="create-plan__form__radio hidden-visually">
-            <label for="cafetiere" class="create-plan__form__label">Cafetiére<span class="create-plan__form__details">Course ground beans specially suited for french press coffee</span></label>
+            <input type="radio" name="grind" value="cafetiére" id="cafetiere" class="create-plan__form__radio hidden-visually js-grind-input">
+            <label for="cafetiere" class="create-plan__form__label">Cafetiére<span class="create-plan__form__details">Coarse ground beans specially suited for french press coffee</span></label>
           </div>
         </div>
       </div>
@@ -164,17 +164,17 @@
         </button>
         <div class="create-plan__form__options" id="delivery">
           <div>
-            <input type="radio" name="delivery" value="Every Week" id="every-week" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="delivery" value="every week" id="every-week" class="create-plan__form__radio hidden-visually">
             <label for="every-week" class="create-plan__form__label" >Every week<span class="create-plan__form__details">$14.00 per shipment. Includes free first-class shipping.</span></label>
           </div>
           <div>
-            <input type="radio" name="delivery" value="Every 2 Weeks" id="every-2-weeks" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="delivery" value="every 2 weeks" id="every-2-weeks" class="create-plan__form__radio hidden-visually">
             <label for="every-2-weeks" class="create-plan__form__label">Every 2 weeks<span class="create-plan__form__details">$17.25 per shipment. Includes free priority shipping.</span></label>
           </div>
           <div>
-            <input type="radio" name="delivery" value="Every Month" id="every-month" class="create-plan__form__radio hidden-visually">
+            <input type="radio" name="delivery" value="every month" id="every-month" class="create-plan__form__radio hidden-visually">
             <label for="every-month" class="create-plan__form__label">Every month<span class="create-plan__form__details">$22.50 per shipment. Includes free priority shipping.</span></label>
-            </div>
+          </div>
         </div>
       </div>
       <div class="create-plan__order-summary">
@@ -183,15 +183,15 @@
         </h3>
         <p class="create-plan__order-summary__text">
           “I drink my coffee 
-          <span class="create-plan__order-summary__choice-intro">using<!--as/using--></span>
-          <span class="create-plan__order-summary__choice">_____</span>, 
+          <span class="create-plan__order-summary__choice-intro js-preference-intro">as<!--as/using--></span>
+          <span class="create-plan__order-summary__choice js-preference">_____</span>, 
           with a 
-          <span class="create-plan__order-summary__choice">_____</span> 
+          <span class="create-plan__order-summary__choice js-bean-type">_____</span> 
           type of bean. 
-          <span class="create-plan__order-summary__choice">_____</span> 
-          <span class="create-plan__order-summary__choice-intro">ground ala</span> 
-          <span class="create-plan__order-summary__choice">_____</span>, sent to me 
-          <span class="create-plan__order-summary__choice">_____</span>.”
+          <span class="create-plan__order-summary__choice js-quantity">_____</span>
+          <span class="create-plan__order-summary__choice-intro js-grind-intro"> ground ala</span>
+          <span class="create-plan__order-summary__choice js-grind">_____</span>, sent to me 
+          <span class="create-plan__order-summary__choice js-delivery">_____</span>.”
         </p>
       </div>
       <button type="submit" class="button button-disabled create-plan__form__submit" disabled>Create my plan!</button>
@@ -201,12 +201,6 @@
   
     <!-- 
 
- 
-
-  Order Summary
-  
-
-  Create my plan!
 
   <!-- Modal -->
   <!-- Order Summary
