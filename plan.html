@@ -79,7 +79,7 @@
     <form class="create-plan__form">
       <div class="create-plan__form__group">
         <button type="button" id="form-preferences" aria-controls="coffee-option" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
-          <span class="create-plan__group__toggle__label">How do you drink your coffee?</span>
+          <span class="create-plan__group__toggle__text">How do you drink your coffee?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
         </button>
         <div class="create-plan__form__options" id="coffee-option">
@@ -99,7 +99,7 @@
       </div>
       <div class="create-plan__form__group">
         <button type="button" id="form-bean-type" aria-controls="bean-type" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
-          <span class="create-plan__group__toggle__label">What type of coffee?</span>
+          <span class="create-plan__group__toggle__text">What type of coffee?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
         </button>
         <div class="create-plan__form__options" id="bean-type">
@@ -119,7 +119,7 @@
       </div>
       <div class="create-plan__form__group">
         <button type="button" id="form-quantity" aria-controls="coffee-quantity" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
-          <span class="create-plan__group__toggle__label">How much would you like?</span>
+          <span class="create-plan__group__toggle__text">How much would you like?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
         </button>
         <div class="create-plan__form__options" id="coffee-quantity">
@@ -139,7 +139,7 @@
       </div>
       <div class="create-plan__form__group">
         <button type="button" id="form-grind" aria-controls="grind" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
-          <span class="create-plan__group__toggle__label">Want us to grind them?</span>
+          <span class="create-plan__group__toggle__text">Want us to grind them?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
         </button>
         <div class="create-plan__form__options" id="grind">
@@ -159,7 +159,7 @@
       </div>
       <div class="create-plan__form__group">
         <button type="button" id="form-deliveries" aria-controls="delivery" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
-          <span class="create-plan__group__toggle__label">How often should we deliver?</span>
+          <span class="create-plan__group__toggle__text">How often should we deliver?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
         </button>
         <div class="create-plan__form__options" id="delivery">
@@ -177,7 +177,20 @@
             </div>
         </div>
       </div>
-
+      <div class="create-plan__order-summary">
+        <p class="create-plan__order-summary__text">
+          “I drink coffee 
+          <span class="create-plan__order-summary__option-intro"><!--as/using--></span>
+          <span class="create-plan__order-summary__option">_____</span>, 
+          with a 
+          <span class="create-plan__order-summary__bean-type">_____</span> 
+          type of bean. 
+          <span class="create-plan__order-summary__quantity">_____</span> 
+          <span class="create-plan__order-summary__grind-intro">ground ala</span> 
+          <span class="create-plan__order-summary__grind">_____</span>, sent to me 
+          <span class="create-plan__order-summary__delivery">_____</span>.”
+        </p>
+      </div>
     </form>
   </section>
 
