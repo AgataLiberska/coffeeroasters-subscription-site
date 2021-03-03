@@ -1419,7 +1419,7 @@ ol, ul {
   }
 }
 
-.create-plan__group__toggle__label {
+.create-plan__group__toggle__text {
   display: inline-block;
   padding-right: 4rem;
   font-family: "Fraunces", serif;
@@ -1431,19 +1431,19 @@ ol, ul {
   transition: all 300ms ease-in-out;
 }
 
-.create-plan__group__toggle__label:hover {
+.create-plan__group__toggle__text:hover {
   color: #333d4b;
 }
 
 @media (min-width: 48rem) {
-  .create-plan__group__toggle__label {
+  .create-plan__group__toggle__text {
     font-size: 2rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width: 64rem) {
-  .create-plan__group__toggle__label {
+  .create-plan__group__toggle__text {
     font-size: 2.5rem;
     line-height: 3rem;
   }

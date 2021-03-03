@@ -1,3 +1,4 @@
+// the entire form section
 .create-plan {
 
     @include breakpoint-up(large) {
@@ -12,6 +13,7 @@
 
 }
 
+// form navigation only displayed on screens 1024px and up
 .create-plan__nav {
     display: none;
 
@@ -40,13 +42,15 @@
     }
 }
 
-.create-plan__form {
+// .create-plan__form {
 
-}
+// }
 
-.create-plan__form__group {
+// .create-plan__form__group {
 
-}
+// }
+
+// form accordion toggle ----------------------------
 
 .create-plan__group__toggle {
     display: flex;
@@ -82,7 +86,7 @@
         }
     }
 
-    //styles for form-options when accordions are expanded
+    // form-options when accordions are expanded
 
     &.is-open + .create-plan__form__options {
         height: max-content;
@@ -95,7 +99,8 @@
     }
 }
 
-.create-plan__group__toggle__label {
+// accordion button text
+.create-plan__group__toggle__text {
     display: inline-block;
     padding-right: 4rem;
     font-family: $heading;
@@ -120,6 +125,7 @@
     }
 }
 
+// accordion button arrow icon
 .create-plan__group__toggle__icon {
     transition: all 200ms ease-in-out;
 
@@ -128,6 +134,8 @@
     }
 }
 
+
+// input group container ------------------------------
 .create-plan__form__options {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -146,7 +154,7 @@
     }
 }
 
-
+// option cards (HTML label element) main text
 .create-plan__form__label {
     display: block;
     height: 100%;
@@ -169,6 +177,7 @@
     }
 }
 
+// option cards (HTML label element) sub text
 .create-plan__form__details {
     display: block;
     padding-top: 0.5rem;
@@ -177,8 +186,7 @@
     line-height: 1.625rem;
 }
 
-// focus styles for radio input
-
+// style cards (label) when input is focused (for keyboard navigation)
 .create-plan__form__radio {
     &:focus + .create-plan__form__label {
         background-color: $paleOrange;
