@@ -1,9 +1,43 @@
 .create-plan {
 
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: 16rem 1fr;
+        gap: 7.5rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding: 0 5.3125rem;
+    }
+
 }
 
 .create-plan__nav {
     display: none;
+
+    @include breakpoint-up(large) {
+        display: block;
+    }
+}
+
+.create-plan__nav__item {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-bottom: 0.5px solid $grey;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $grey;
+    opacity: 0.4;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+
+    &:hover, &:focus {
+        outline: none;
+        color: $darkGreyBlue;
+        opacity: 1;
+    }
 }
 
 .create-plan__form {
@@ -25,6 +59,14 @@
     border: none;
     cursor: pointer;
 
+    @include breakpoint-up(medium) {
+        margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        margin-bottom: 2.5rem;
+    }
+
     &:focus  {
         outline: none;
         border-bottom: 1px solid $grey;
@@ -40,10 +82,16 @@
         }
     }
 
+    //styles for form-options when accordions are expanded
+
     &.is-open + .create-plan__form__options {
         height: max-content;
         padding-bottom: 6rem;
         opacity: 1;
+
+        @include breakpoint-up(large) {
+            padding-bottom: 5rem;
+        }
     }
 }
 
@@ -60,6 +108,16 @@
     &:hover {
         color: $darkGreyBlue;
     }
+
+    @include breakpoint-up(medium) {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
 }
 
 .create-plan__group__toggle__icon {
@@ -74,6 +132,7 @@
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
+    align-items: stretch;
     padding-bottom: 2rem;
     height: 0px;
     overflow: hidden;
@@ -90,6 +149,7 @@
 
 .create-plan__form__label {
     display: block;
+    height: 100%;
     padding: 1.5rem;
     border-radius: $border-radius;
     background-color: $cream;
