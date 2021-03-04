@@ -42,42 +42,59 @@ const modalSummary = document.querySelector('.js-modal-summary');
 const modalTotal = document.querySelector('.js-total');
 
 
-// prices
-let pricing = {
-    setSize(size) {
-        this.currentSize = size;
+// prices per package depending on frequency
+const priceConfig = {
+    "250g": {
+        "every week": 7.20, 
+        "every 2 weeks": 9.60, 
+        "every month": 12.00,
     },
-    currentSize: "100g",
-
-    getWeeklyPrice() {
-        return this.priceConfig[this.currentSize]["weekly"];
+    "500g": {
+        "every week": 13.00, 
+        "every 2 weeks": 17.50, 
+        "every month": 22.00,
     },
-    getBiweeklyPrice() {
-        return this.priceConfig[this.currentSize]["biweekly"];
+    "1000g": {
+        "every week": 22.00, 
+        "every 2 weeks": 32.00, 
+        "every month": 42.00,
     },
-    getMonthlyPrice() {
-        return this.priceConfig[this.currentSize]["monthly"];
-    },
-
-    priceConfig: {
-        "250g": {
-            weekly: 7.20, 
-            biweekly: 9.60, 
-            monthly: 12.00,
-        },
-        "500g": {
-            weekly: 13.00, 
-            biweekly: 17.50, 
-            monthly: 22.00,
-        },
-        "1000g": {
-            weekly: 22.00, 
-            biweekly: 32.00, 
-            monthly: 42.00,
-        },
-    }
 }
 
+const totalMultiplier = {
+    "every week" : 4,
+    "every 2 weeks" : 2,
+    "every month" : 1,
+}
+
+// prices as displayed in the form
+const pricing = {
+    
+    selectedSize: "",
+    setSize(size) {
+        this.selectedSize = size;
+    },
+
+    frequency: "",
+
+    setFrequency(frequency) {
+        this.frequency = frequency;
+    },
+    
+    // get option prices to be displayed in the subscription form
+    getWeeklyPrice() {
+        return priceConfig[this.selectedSize]["every week"];
+    },
+    getBiweeklyPrice() {
+        return priceConfig[this.selectedSize]["every 2 weeks"];
+    },
+    getMonthlyPrice() {
+        return priceConfig[this.selectedSize]["every month"];
+    },
+    getTotal() {
+        return priceConfig[this.selectedSize][this.frequency] * totalMultiplier[this.frequency];
+    }
+}
 
 
 // FUNCTIONS ============================================================
@@ -202,6 +219,7 @@ function handleInputs(e) {
             break;
 
         case 'delivery': 
+            pricing.setFrequency(e.target.value);
             updateField(delivery, e.target.value);
             break;
     }
@@ -298,4 +316,5 @@ submitBtn.addEventListener('click', e => {
     fadeIn(modal);
 
     modalSummary.innerHTML = orderSummary.innerHTML;
+    updateField(modalTotal, pricing.getTotal().toFixed(2));
 })
