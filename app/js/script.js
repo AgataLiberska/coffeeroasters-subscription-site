@@ -10,6 +10,12 @@ const accordionToggles = document.querySelectorAll('.js-accordion-toggle');
 // all radio inputs
 const formInputs = document.querySelectorAll('input');
 
+// fields to update price of shipment
+const weeklyPrice = document.querySelector('.js-weekly-price');
+const biweeklyPrice = document.querySelector('.js-biweekly-price');
+const monthlyPrice = document.querySelector('.js-monthly-price');
+const priceLabels = document.querySelectorAll('.js-price-text');
+
 // form submit button
 const submitBtn = document.querySelector('.js-form-submit');
 
@@ -34,6 +40,44 @@ const overlay = document.querySelector('.js-overlay');
 const modal = document.querySelector('.js-modal');
 const modalSummary = document.querySelector('.js-modal-summary');
 const modalTotal = document.querySelector('.js-total');
+
+// prices
+
+let pricing = {
+    setSize(size) {
+        this.currentSize = size;
+    },
+    currentSize: "100g",
+
+    getWeeklyPrice() {
+        return `$${this.priceConfig[this.currentSize]["weekly"]}`;
+    },
+    getBiweeklyPrice() {
+        return `$${this.priceConfig[this.currentSize]["biweekly"]}`;
+    },
+    getMonthlyPrice() {
+        return `$${this.priceConfig[this.currentSize]["monthly"]}`;
+    },
+
+    priceConfig: {
+        "250g": {
+            weekly: "7.20", 
+            biweekly: "9.60", 
+            monthly: "12.00",
+        },
+        "500g": {
+            weekly: "13.00", 
+            biweekly: "17.50", 
+            monthly: "22.00",
+        },
+        "1000g": {
+            weekly: "22.00", 
+            biweekly: "32.00", 
+            monthly: "42.00",
+        },
+    }
+}
+
 
 
 // FUNCTIONS ============================================================
@@ -87,7 +131,7 @@ function updateField(field, content) {
     field.textContent = content;
 }
 
-function updateOrderSummary(e) {
+function handleInputs(e) {
     switch (e.target.name) {
         case 'preferences': 
             if (e.target.value === 'capsules') {
@@ -126,6 +170,14 @@ function updateOrderSummary(e) {
             break;
 
         case 'quantity':
+            pricing.setSize(e.target.value);
+            updateField(weeklyPrice, pricing.getWeeklyPrice());
+            updateField(biweeklyPrice, pricing.getBiweeklyPrice());
+            updateField(monthlyPrice, pricing.getMonthlyPrice());
+
+            priceLabels.forEach(label => {
+                updateField(label, " per shipment.");
+            })
             updateField(quantity, e.target.value);
             break;
 
@@ -219,7 +271,7 @@ accordionToggles.forEach(accordion => {
 // update order summary while filling out the form
 formInputs.forEach(input => {
     input.addEventListener('change', e => {
-        updateOrderSummary(e);
+        handleInputs(e);
     })
 })
 
