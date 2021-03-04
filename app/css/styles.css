@@ -1412,6 +1412,12 @@ ol, ul {
   color: #333d4b;
 }
 
+.create-plan__group__toggle:disabled .create-plan__group__toggle__text {
+  color: #83888f;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .create-plan__group__toggle.is-open + .create-plan__form__options {
   height: -webkit-max-content;
   height: -moz-max-content;

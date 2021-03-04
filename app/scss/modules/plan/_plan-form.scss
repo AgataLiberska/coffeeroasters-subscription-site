@@ -84,6 +84,14 @@
         }
     }
 
+    &:disabled {
+        & .create-plan__group__toggle__text {
+            color: $grey;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
     // form-options when accordions are expanded
 
     &.is-open + .create-plan__form__options {
