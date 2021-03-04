@@ -41,8 +41,8 @@ const modal = document.querySelector('.js-modal');
 const modalSummary = document.querySelector('.js-modal-summary');
 const modalTotal = document.querySelector('.js-total');
 
-// prices
 
+// prices
 let pricing = {
     setSize(size) {
         this.currentSize = size;
@@ -50,30 +50,30 @@ let pricing = {
     currentSize: "100g",
 
     getWeeklyPrice() {
-        return `$${this.priceConfig[this.currentSize]["weekly"]}`;
+        return this.priceConfig[this.currentSize]["weekly"];
     },
     getBiweeklyPrice() {
-        return `$${this.priceConfig[this.currentSize]["biweekly"]}`;
+        return this.priceConfig[this.currentSize]["biweekly"];
     },
     getMonthlyPrice() {
-        return `$${this.priceConfig[this.currentSize]["monthly"]}`;
+        return this.priceConfig[this.currentSize]["monthly"];
     },
 
     priceConfig: {
         "250g": {
-            weekly: "7.20", 
-            biweekly: "9.60", 
-            monthly: "12.00",
+            weekly: 7.20, 
+            biweekly: 9.60, 
+            monthly: 12.00,
         },
         "500g": {
-            weekly: "13.00", 
-            biweekly: "17.50", 
-            monthly: "22.00",
+            weekly: 13.00, 
+            biweekly: 17.50, 
+            monthly: 22.00,
         },
         "1000g": {
-            weekly: "22.00", 
-            biweekly: "32.00", 
-            monthly: "42.00",
+            weekly: 22.00, 
+            biweekly: 32.00, 
+            monthly: 42.00,
         },
     }
 }
@@ -100,11 +100,19 @@ function hide(element) {
 function expand(accordion) {
     accordion.classList.add('is-open');
     accordion.setAttribute("aria-expanded", "true");
+    let inputs = accordion.nextElementSibling.querySelectorAll('input');
+    inputs.forEach(input => {
+        input.setAttribute("tabindex", "0");
+    })
 }
 
 function collapse(accordion) {
     accordion.classList.remove('is-open');
     accordion.setAttribute("aria-expanded", "false");
+    let inputs = accordion.nextElementSibling.querySelectorAll('input');
+    inputs.forEach(input => {
+        input.setAttribute("tabindex", "-1");
+    })
 }
 
 function disableAccordion(accordion) {
@@ -171,13 +179,14 @@ function handleInputs(e) {
 
         case 'quantity':
             pricing.setSize(e.target.value);
-            updateField(weeklyPrice, pricing.getWeeklyPrice());
-            updateField(biweeklyPrice, pricing.getBiweeklyPrice());
-            updateField(monthlyPrice, pricing.getMonthlyPrice());
+            updateField(weeklyPrice, `$${pricing.getWeeklyPrice().toFixed(2)}`);
+            updateField(biweeklyPrice, `$${pricing.getBiweeklyPrice().toFixed(2)}`);
+            updateField(monthlyPrice, `$${pricing.getMonthlyPrice().toFixed(2)}`);
 
             priceLabels.forEach(label => {
                 updateField(label, " per shipment.");
             })
+
             updateField(quantity, e.target.value);
             break;
 
@@ -259,7 +268,7 @@ navToggle.addEventListener('click', () => {
 
 // toggle form accordions
 accordionToggles.forEach(accordion => {
-    accordion.addEventListener('click', () => {
+    accordion.addEventListener('click', (e) => {
         if (accordion.classList.contains('is-open')) {
             collapse(accordion);
         } else {
