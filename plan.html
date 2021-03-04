@@ -43,6 +43,7 @@
     <p class="plan-hero__tagline">Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.</p>
   </section>
   <section class="how-to how-to--dark">
+    <h2 class="hidden-visually">How it works</h2>
     <ol class="how-to__info">
       <li class="how-to__step how-to--dark__step">
         <span class="how-to__step-no">01</span>
@@ -69,6 +70,7 @@
     </ol>
   </section>
   <section class="create-plan m-x m-b-med">
+    <h2 class="hidden-visually">Create your plan</h2>
     <nav class="create-plan__nav">
       <a href="#form-preferences" class="create-plan__nav__item">01 Preferences</a>
       <a href="#form-bean-type" class="create-plan__nav__item">02 Bean type</a>
@@ -150,7 +152,7 @@
 
           <input type="radio" name="grind" value="cafetiére" id="cafetiere" class="create-plan__form__radio hidden-visually js-grind-input">
           <label for="cafetiere" class="create-plan__form__label">Cafetiére<span class="create-plan__form__details">Coarse ground beans specially suited for french press coffee</span></label>
-          
+
         </fieldset>
       </div>
       <div class="create-plan__form__group">
@@ -158,20 +160,19 @@
           <span class="create-plan__group__toggle__text">How often should we deliver?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
         </button>
-        <div class="create-plan__form__options" id="delivery">
-          <div>
-            <input type="radio" name="delivery" value="every week" id="every-week" class="create-plan__form__radio hidden-visually">
-            <label for="every-week" class="create-plan__form__label" >Every week<span class="create-plan__form__details">$14.00 per shipment. Includes free first-class shipping.</span></label>
-          </div>
-          <div>
-            <input type="radio" name="delivery" value="every 2 weeks" id="every-2-weeks" class="create-plan__form__radio hidden-visually">
-            <label for="every-2-weeks" class="create-plan__form__label">Every 2 weeks<span class="create-plan__form__details">$17.25 per shipment. Includes free priority shipping.</span></label>
-          </div>
-          <div>
-            <input type="radio" name="delivery" value="every month" id="every-month" class="create-plan__form__radio hidden-visually">
-            <label for="every-month" class="create-plan__form__label">Every month<span class="create-plan__form__details">$22.50 per shipment. Includes free priority shipping.</span></label>
-          </div>
-        </div>
+        <fieldset class="create-plan__form__options" id="delivery">
+          <legend class="hidden-visually">Choose delivery frequency</legend>
+          
+          <input type="radio" name="delivery" value="every week" id="every-week" class="create-plan__form__radio hidden-visually">
+          <label for="every-week" class="create-plan__form__label" >Every week<span class="create-plan__form__details">$14.00 per shipment. Includes free first-class shipping.</span></label>
+      
+          <input type="radio" name="delivery" value="every 2 weeks" id="every-2-weeks" class="create-plan__form__radio hidden-visually">
+          <label for="every-2-weeks" class="create-plan__form__label">Every 2 weeks<span class="create-plan__form__details">$17.25 per shipment. Includes free priority shipping.</span></label>
+    
+          <input type="radio" name="delivery" value="every month" id="every-month" class="create-plan__form__radio hidden-visually">
+          <label for="every-month" class="create-plan__form__label">Every month<span class="create-plan__form__details">$22.50 per shipment. Includes free priority shipping.</span></label>
+
+        </fieldset>
       </div>
       <div class="create-plan__order-summary">
         <h3 class="create-plan__order-summary__heading">
