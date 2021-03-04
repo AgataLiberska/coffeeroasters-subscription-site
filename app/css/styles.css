@@ -1481,7 +1481,8 @@ ol, ul {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  padding-bottom: 2rem;
+  border: none;
+  padding: 0 0 2rem;
   height: 0px;
   overflow: hidden;
   opacity: 0;
