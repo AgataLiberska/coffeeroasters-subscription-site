@@ -1,6 +1,12 @@
 // accordion butttons
 const accordionToggles = document.querySelectorAll('.js-accordion-toggle');
 
+// form
+const subscriptionForm = document.querySelector('.js-form');
+
+// submit buttons
+const submitBtn = document.querySelector('.js-form-submit');
+
 // all radio inputs
 const formInputs = document.querySelectorAll('input');
 
@@ -50,10 +56,81 @@ function enableInput(input) {
     input.setAttribute("required", "");
 }
 
-function updateSummary(field, content) {
+function updateField(field, content) {
     field.textContent = content;
 }
 
+
+function updateOrderSummary(e) {
+    switch (e.target.name) {
+        case 'preferences': 
+            if (e.target.value === 'capsules') {
+                disableAccordion(grindAccordion);
+                collapse(grindAccordion);
+                grindInputs.forEach(input => disableInput(input));
+
+                updateField(preferenceIntro,"using ");
+                
+                // remove grind from summary if capsules are selected
+                updateField(grindIntro, "");
+                updateField(grind, "");
+            } 
+            
+            else {
+                enableAccordion(grindAccordion);
+                grindInputs.forEach(input => enableInput(input));
+
+                preferenceIntro.textContent = "as ";
+
+                // don't add ground ala if wholebean has been chosen
+                if (grind.textContent !== 'wholebean') {
+                    updateField(grindIntro, " ground ala");
+                }
+                
+                // only add empty field when no option has been chosen
+                if (!grind.textContent) {
+                    updateField(grind, "_____");
+                }
+            }
+            updateField(preference, e.target.value);
+            break;
+
+        case 'bean-type':
+            updateField(beanType, e.target.value);
+            break;
+
+        case 'quantity':
+            updateField(quantity, e.target.value);
+            break;
+
+        case 'grind':
+            // remove 'ground ala' from order summary for wholebean
+            if (e.target.value === 'wholebean') {
+                updateField(grindIntro, "");
+            }                 
+            else {
+                updateField(grindIntro, " ground ala");
+            }
+            updateField(grind, e.target.value);
+            break;
+
+        case 'delivery': 
+            updateField(delivery, e.target.value);
+            break;
+    }
+}
+
+function validateInputs(inputs) {
+    const inputArr = Array.from(inputs)
+    const invalidInputs = inputArr.some(input => input.validity.valueMissing);
+    if (invalidInputs) {
+        return;
+    }
+    else {
+        submitBtn.classList.remove('button-disabled');
+        submitBtn.removeAttribute('disabled');
+    }
+}
 
 // EVENT LISTENERS ===================================
 
@@ -69,61 +146,18 @@ accordionToggles.forEach(accordion => {
 
 formInputs.forEach(input => {
     input.addEventListener('change', e => {
-        switch (e.target.name) {
-            case 'preferences': 
-                if (e.target.value === 'capsules') {
-                    disableAccordion(grindAccordion);
-                    collapse(grindAccordion);
-                    grindInputs.forEach(input => disableInput(input));
+        updateOrderSummary(e);
+        
+        // go through all inputs
+        // check input.validity.valueMissing
+        // if any are true, then disable the button
+        // if all are false, enable the button
+    })
+})
 
-                    updateSummary(preferenceIntro,"using ");
-                    
-                    // remove grind from summary if capsules are selected
-                    updateSummary(grindIntro, "");
-                    updateSummary(grind, "");
-                } 
-                
-                else {
-                    enableAccordion(grindAccordion);
-                    grindInputs.forEach(input => enableInput(input));
 
-                    preferenceIntro.textContent = "as ";
-
-                    // don't add ground ala if wholebean has been chosen
-                    if (grind.textContent !== 'wholebean') {
-                        updateSummary(grindIntro, " ground ala");
-                    }
-                    
-                    // only add empty field when no option has been chosen
-                    if (!grind.textContent) {
-                        updateSummary(grind, "_____");
-                    }
-                }
-                updateSummary(preference, e.target.value);
-                break;
-
-            case 'bean-type':
-                updateSummary(beanType, e.target.value);
-                break;
-
-            case 'quantity':
-                updateSummary(quantity, e.target.value);
-                break;
-
-            case 'grind':
-                // remove 'ground ala' from order summary for wholebean
-                if (e.target.value === 'wholebean') {
-                    updateSummary(grindIntro, "");
-                }                 
-                else {
-                    updateSummary(grindIntro, " ground ala");
-                }
-                updateSummary(grind, e.target.value);
-                break;
-
-            case 'delivery': 
-                updateSummary(delivery, e.target.value);
-                break;
-        }
+formInputs.forEach(input => {
+    input.addEventListener('change', e => {
+        validateInputs(formInputs);
     })
 })
