@@ -10,21 +10,43 @@
 
 .modal {
     position: fixed;
-    min-width: 18.75rem;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    top: 2.25rem;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    min-width: 18.75rem;
+    max-width: 33.75rem;
     border-radius: $border-radius;
-    background: $lightCream;
+    overflow: hidden;
+}
+
+
+.modal__header {
+    background-color: $darkGreyBlue;
 }
 
 .modal__heading {
     padding: 1.7rem 1.5rem;
-    background-color: $darkGreyBlue;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
     font-size: 1.75rem;
     line-height: 2rem;
     color: $lightCream;
+}
+
+.modal__main {
+    padding: 2.5rem 1.5rem 1.5rem;
+    background-color: $lightCream;
+}
+
+.modal__text {
+    padding-bottom: 1.5rem;
+}
+
+.modal__btn {
+    display: block;
+    margin: 0 auto;
+
+}
+
+.modal__price {
 
 }

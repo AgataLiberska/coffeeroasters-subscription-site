@@ -10,7 +10,7 @@
   <title>Coffeeroasters | Create your plan</title>
 
   <script src="/app/js/script.js" defer></script>
-  <script src="/app/js/create-plan.js" defer></script>
+  <!-- <script src="/app/js/create-plan.js" defer></script> -->
 </head>
 
 <body>
@@ -178,7 +178,7 @@
         <h3 class="order-summary__heading">
           order summary
         </h3>
-        <div class="order-summary__text order-summary__text--light">
+        <div class="order-summary__text order-summary__text--light js-summary">
           <p>
             “I drink my coffee 
             <span class="js-preference-intro">as<!--as/using--></span>
@@ -196,16 +196,23 @@
       <button type="submit" class="button button-disabled create-plan__form__submit js-form-submit" disabled>Create my plan!</button>
     </form>
   </section>
-  <div class="overlay hidden"></div>
-  <div class="modal hidden">
-    <h3 class="modal__heading">Order Summary</h3>
-    <p class="modal__order-summary js-modal-order"></p>
-  </div>
-  </div>
+  <div class="overlay hidden js-overlay"></div>
+    <div class="modal hidden js-modal">
+      <div class="modal__header">
+        <h3 class="modal__heading">Order Summary</h3>
+      </div>
+      <div class="modal__main">
+        <div class="order-summary__text order-summary__text--dark js-modal-summary">
   
+        </div>
+        <div class="modal__text">
+          <p>Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.</p>
+        </div>
+        <button class="button modal__btn">Checkout - $<span class="js-total"></span> /mo</button>
+      </div>
+    </div>
+  </div>
 
-  
-    <!-- 
 
 
   <!-- Modal -->
@@ -214,8 +221,7 @@
   “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
   sent to me _____.”
 
-  Is this correct? You can proceed to checkout or go back to plan selection if something 
-  is off. Subscription discount codes can also be redeemed at the checkout.
+  
 
   $_____/month
 
