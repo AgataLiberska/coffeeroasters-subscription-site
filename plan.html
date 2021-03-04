@@ -78,8 +78,8 @@
       <a href="#form-grind" class="create-plan__nav__item">04 Grind option</a>
       <a href="#form-deliveries" class="create-plan__nav__item">05 Deliveries</a>
     </nav>
-    <form class="create-plan__form js-form">
-      <div class="create-plan__form__group">
+    <form class="js-form">
+      <div>
         <button type="button" id="form-preferences" aria-controls="coffee-preferences" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
           <span class="create-plan__group__toggle__text">How do you drink your coffee?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
@@ -98,7 +98,7 @@
 
         </fieldset>
       </div>
-      <div class="create-plan__form__group">
+      <div>
         <button type="button" id="form-bean-type" aria-controls="bean-type" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
           <span class="create-plan__group__toggle__text">What type of coffee?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
@@ -117,7 +117,7 @@
           
         </fieldset>
       </div>
-      <div class="create-plan__form__group">
+      <div>
         <button type="button" id="form-quantity" aria-controls="coffee-quantity" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
           <span class="create-plan__group__toggle__text">How much would you like?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
@@ -136,7 +136,7 @@
 
         </fieldset>
       </div>
-      <div class="create-plan__form__group">
+      <div>
         <button type="button" id="form-grind" aria-controls="grind" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle js-grind-toggle">
           <span class="create-plan__group__toggle__text">Want us to grind them?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
@@ -155,7 +155,7 @@
 
         </fieldset>
       </div>
-      <div class="create-plan__form__group">
+      <div>
         <button type="button" id="form-deliveries" aria-controls="delivery" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
           <span class="create-plan__group__toggle__text">How often should we deliver?</span>
           <span><img src="/assets/plan/desktop/icon-arrow.svg" alt="" class="create-plan__group__toggle__icon"></span>
@@ -174,26 +174,35 @@
 
         </fieldset>
       </div>
-      <div class="create-plan__order-summary">
-        <h3 class="create-plan__order-summary__heading">
+      <div class="order-summary">
+        <h3 class="order-summary__heading">
           order summary
         </h3>
-        <p class="create-plan__order-summary__text">
-          “I drink my coffee 
-          <span class="create-plan__order-summary__choice-intro js-preference-intro">as<!--as/using--></span>
-          <span class="create-plan__order-summary__choice js-preference">_____</span>, 
-          with a 
-          <span class="create-plan__order-summary__choice js-bean-type">_____</span> 
-          type of bean. 
-          <span class="create-plan__order-summary__choice js-quantity">_____</span>
-          <span class="create-plan__order-summary__choice-intro js-grind-intro"> ground ala</span>
-          <span class="create-plan__order-summary__choice js-grind">_____</span>, sent to me 
-          <span class="create-plan__order-summary__choice js-delivery">_____</span>.”
-        </p>
+        <div class="order-summary__text order-summary__text--light">
+          <p>
+            “I drink my coffee 
+            <span class="js-preference-intro">as<!--as/using--></span>
+            <span class="order-summary__choice js-preference">_____</span>, 
+            with a 
+            <span class="order-summary__choice js-bean-type">_____</span> 
+            type of bean. 
+            <span class="order-summary__choice js-quantity">_____</span>
+            <span class="js-grind-intro"> ground ala</span>
+            <span class="order-summary__choice js-grind">_____</span>, sent to me 
+            <span class="order-summary__choice js-delivery">_____</span>.”
+          </p>
+        </div>
       </div>
       <button type="submit" class="button button-disabled create-plan__form__submit js-form-submit" disabled>Create my plan!</button>
     </form>
   </section>
+  <div class="overlay hidden"></div>
+  <div class="modal hidden">
+    <h3 class="modal__heading">Order Summary</h3>
+    <p class="modal__order-summary js-modal-order"></p>
+  </div>
+  </div>
+  
 
   
     <!-- 

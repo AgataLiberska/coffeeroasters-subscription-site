@@ -10,6 +10,9 @@ const submitBtn = document.querySelector('.js-form-submit');
 // all radio inputs
 const formInputs = document.querySelectorAll('input');
 
+// order summary
+const orderSummary = document.querySelector('.create-plan__order-summary__text');
+
 // order summary fields
 const preference = document.querySelector('.js-preference');
 const preferenceIntro = document.querySelector('.js-preference-intro');
@@ -22,6 +25,8 @@ const delivery = document.querySelector('.js-delivery');
 // elements which need to be disabled if 'capsule' is chosen
 const grindAccordion = document.querySelector('.js-grind-toggle');
 const grindInputs = document.querySelectorAll('.js-grind-input');
+
+
 
 
 // FUNCTIONS =========================================
@@ -147,11 +152,6 @@ accordionToggles.forEach(accordion => {
 formInputs.forEach(input => {
     input.addEventListener('change', e => {
         updateOrderSummary(e);
-        
-        // go through all inputs
-        // check input.validity.valueMissing
-        // if any are true, then disable the button
-        // if all are false, enable the button
     })
 })
 

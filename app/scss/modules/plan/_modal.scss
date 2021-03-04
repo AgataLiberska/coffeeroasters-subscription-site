@@ -1,0 +1,30 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.modal {
+    position: fixed;
+    min-width: 18.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2.25rem;
+    border-radius: $border-radius;
+    background: $lightCream;
+}
+
+.modal__heading {
+    padding: 1.7rem 1.5rem;
+    background-color: $darkGreyBlue;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    color: $lightCream;
+
+}
