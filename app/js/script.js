@@ -1,8 +1,11 @@
-// MOBILE NAVBAR
+// MOBILE NAVBAR ========================================
 const navToggle = document.querySelector('.js-nav-toggle');
 const openNav = document.querySelector('.js-toggle-open');
 const closeNav = document.querySelector('.js-toggle-close');
 const mobileNav = document.querySelector('.js-mobile-nav');
+
+// FORM ==================================================
+const subscriptionForm = document.getElementById('subscription-form');
 
 // accordion buttons
 const accordionToggles = document.querySelectorAll('.js-accordion-toggle');
@@ -16,8 +19,8 @@ const biweeklyPrice = document.querySelector('.js-biweekly-price');
 const monthlyPrice = document.querySelector('.js-monthly-price');
 const priceLabels = document.querySelectorAll('.js-price-text');
 
-// form submit button
-const submitBtn = document.querySelector('.js-form-submit');
+// form end of form (confirmation) button
+const confirmBtn = document.querySelector('.js-form-confirm');
 
 // order summary - full text
 const orderSummary = document.querySelector('.js-summary');
@@ -40,6 +43,8 @@ const overlay = document.querySelector('.js-overlay');
 const modal = document.querySelector('.js-modal');
 const modalSummary = document.querySelector('.js-modal-summary');
 const modalTotal = document.querySelector('.js-total');
+
+const submitBtn = document.querySelector('.js-form-submit')
 
 
 // prices per package depending on frequency
@@ -232,8 +237,8 @@ function validateInputs(inputs) {
         return;
     }
     else {
-        submitBtn.classList.remove('button-disabled');
-        submitBtn.removeAttribute('disabled');
+        confirmBtn.classList.remove('button-disabled');
+        confirmBtn.removeAttribute('disabled');
     }
 }
 
@@ -309,12 +314,24 @@ formInputs.forEach(input => {
     })
 })
 
-// display modal on form submit
-submitBtn.addEventListener('click', e => {
-    e.preventDefault();
+// display modal 
+confirmBtn.addEventListener('click', e => {
+
     fadeIn(overlay);
     fadeIn(modal);
-
+    
     modalSummary.innerHTML = orderSummary.innerHTML;
     updateField(modalTotal, pricing.getTotal().toFixed(2));
+    
 })
+
+
+// submit form
+subscriptionForm.addEventListener('submit', e=> {
+    e.preventDefault();
+    console.log(e);
+    fadeOut(overlay);
+    fadeOut(modal);
+})
+
+

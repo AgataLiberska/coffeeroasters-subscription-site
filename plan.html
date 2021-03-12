@@ -78,7 +78,7 @@
       <a href="#form-grind" class="create-plan__nav__item" tabindex="-1">04 Grind option</a>
       <a href="#form-deliveries" class="create-plan__nav__item" tabindex="-1">05 Deliveries</a>
     </nav>
-    <form class="js-form">
+    <form class="js-form" id="subscription-form">
       <div>
         <button type="button" id="form-preferences" aria-controls="coffee-preferences" aria-expanded="false" class="create-plan__group__toggle js-accordion-toggle">
           <span class="create-plan__group__toggle__text">How do you drink your coffee?</span>
@@ -193,7 +193,7 @@
           </p>
         </div>
       </div>
-      <button type="submit" class="button button-disabled create-plan__form__submit js-form-submit" disabled>Create my plan!</button>
+      <button type="button" class="button button-disabled create-plan__form__submit js-form-confirm" disabled>Create my plan!</button>
     </form>
   </section>
   <div class="overlay hidden js-overlay"></div>
@@ -208,7 +208,7 @@
         <div class="modal__text">
           <p>Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.</p>
         </div>
-        <button type="submit" class="button modal__btn">Checkout - $<span class="js-total"></span> /mo</button>
+        <button type="submit" form="subscription-form" class="button modal__btn js-form-submit">Checkout - $<span class="js-total"></span> /mo</button>
       </div>
     </div>
   </div>
