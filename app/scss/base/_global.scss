@@ -5,6 +5,13 @@ html {
 *, *::before, *::after {
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $lightCream;
+    font-family: $body;
     font-size: 0.9375rem;
     line-height: 1.5625rem;
     color: $darkGreyBlue;
@@ -13,13 +20,6 @@ html {
         font-size: 1rem;
         line-height: 1.625rem;
     }
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: $lightCream;
-    font-family: $body;
 }
 
 

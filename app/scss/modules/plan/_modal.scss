@@ -1,0 +1,51 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $overlayColor;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    min-width: 18.75rem;
+    max-width: 33.75rem;
+    border-radius: $border-radius;
+    overflow: hidden;
+}
+
+
+.modal__header {
+    background-color: $darkGreyBlue;
+}
+
+.modal__heading {
+    padding: 1.7rem 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    color: $lightCream;
+}
+
+.modal__main {
+    padding: 2.5rem 1.5rem 1.5rem;
+    background-color: $lightCream;
+}
+
+.modal__text {
+    padding-bottom: 1.5rem;
+}
+
+.modal__btn {
+    display: block;
+    margin: 0 auto;
+
+}
+
+.modal__price {
+
+}

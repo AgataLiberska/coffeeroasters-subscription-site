@@ -1,0 +1,222 @@
+// the entire form section
+.create-plan {
+
+    @include breakpoint-up(large) {
+        display: grid;
+        grid-template-columns: 16rem 1fr;
+        gap: 7.5rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding: 0 5.3125rem;
+    }
+
+}
+
+// form navigation only displayed on screens 1024px and up
+.create-plan__nav {
+    display: none;
+
+    @include breakpoint-up(large) {
+        display: block;
+    }
+}
+
+.create-plan__nav__item {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-bottom: 0.5px solid $grey;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $grey;
+    opacity: 0.4;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+
+    &:hover, &:focus {
+        outline: none;
+        color: $darkGreyBlue;
+        opacity: 1;
+    }
+}
+
+// .create-plan__form {
+// }
+
+// .create-plan__form__group {
+// }
+
+// form accordion toggle ----------------------------
+
+.create-plan__group__toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        margin-bottom: 2.5rem;
+    }
+
+    &:focus  {
+        outline: none;
+        border-bottom: 1px solid $grey;
+
+        & >.create-plan__group__toggle__text {
+            color: $darkGreyBlue;
+        }
+    }
+
+    &:hover {
+        & .create-plan__group__toggle__text {
+            color: $darkGreyBlue;
+        }
+    }
+
+    &:disabled {
+        & .create-plan__group__toggle__text {
+            color: $grey;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    // form-options when accordions are expanded
+
+    &.is-open + .create-plan__form__options {
+        height: max-content;
+        padding-bottom: 6rem;
+        opacity: 1;
+
+        @include breakpoint-up(large) {
+            padding-bottom: 5rem;
+        }
+    }
+}
+
+// accordion button text
+.create-plan__group__toggle__text {
+    display: inline-block;
+    padding-right: 4rem;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: $grey;
+    text-align: left;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+        color: $darkGreyBlue;
+    }
+
+    @include breakpoint-up(medium) {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+// accordion button arrow icon
+.create-plan__group__toggle__icon {
+    transition: all 200ms ease-in-out;
+
+    .is-open & {
+        transform: rotate(-180deg);
+    }
+}
+
+
+// input group container ------------------------------
+.create-plan__form__options {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: stretch;
+    border: none;
+    padding: 0 0 2rem;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+
+    @include breakpoint-up(medium) {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+        gap: 0.625rem;
+    }
+}
+
+// option cards (HTML label element) main text
+.create-plan__form__label {
+    display: block;
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: $border-radius;
+    background-color: $cream;
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        background-color: $paleOrange;
+        cursor: pointer;
+    }
+
+    @include breakpoint-up(medium) {
+        padding-top: 2rem;
+        padding-bottom: 5.25rem;
+    }
+}
+
+// option cards (HTML label element) sub text
+.create-plan__form__details {
+    display: block;
+    padding-top: 0.5rem;
+    font-family: $body;
+    font-size: 1rem;
+    line-height: 1.625rem;
+}
+
+// style cards (label) when input is focused (for keyboard navigation)
+.create-plan__form__radio {
+    &:focus + .create-plan__form__label {
+        background-color: $paleOrange;
+    }
+
+    &:checked + .create-plan__form__label {
+        background-color: $darkCyan;
+        color: $lightCream;
+
+        & .create-plan__form__details {
+            color: $lightCream;
+        }
+    }
+}
+
+
+
+// submit button -------------------------------
+.create-plan__form__submit {
+    display: block;
+    margin: auto;
+
+    @include breakpoint-up(large) {
+        margin-right: 0;
+    }
+}

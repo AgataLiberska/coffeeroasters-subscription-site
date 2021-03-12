@@ -1,0 +1,59 @@
+.plan-hero {
+    padding: 6.25rem 1.5rem 8.5rem;
+    border-radius: $border-radius;
+    background-image: url('/assets/plan/mobile/image-hero-blackcup.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        padding: 8rem 3.625rem 7.75rem;
+        background-image: url('/assets/plan/tablet/image-hero-blackcup.jpg');
+        text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 8.5rem 5.3125rem;
+        background-image: url('/assets/plan/desktop/image-hero-blackcup.jpg');
+    }
+}
+
+.plan-hero__heading {
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: $lightCream;
+
+    @include breakpoint-up(medium) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+        font-size: 3.5rem;
+        line-height: 3.5rem;;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding-bottom: 2rem;
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+}
+
+.plan-hero__tagline {
+    max-width: 26.25rem;
+    margin: auto;
+    color: $lightCream;
+    opacity: 0.8;
+
+    @include breakpoint-up(medium) {
+        margin: unset;
+        padding-right: 4rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding-right: 0;
+    }
+}
