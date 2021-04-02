@@ -304,19 +304,25 @@ ol, ul {
   }
 }
 
+.header__logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 0px;
+  width: 100%;
+  background-color: #333d4b;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
+}
+
 .header__logo:focus {
   outline: 0;
 }
 
 .header__logo:focus::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #333d4b;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  height: 3px;
 }
 
 .header__logo__img {

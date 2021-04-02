@@ -27,17 +27,22 @@
         width: 14.75rem;
     }
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 0px;
+        width: 100%;
+        background-color: $darkGreyBlue;
+        transform: translateX(-100%);
+        transition: height 200ms ease-in-out;
+    }
+
     &:focus {
         outline: 0;
 
         &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            height: 2px;
-            width: 100%;
-            background-color: $darkGreyBlue;
-            transform: translateX(-100%);
+            height: 3px;
         }
     }
 
