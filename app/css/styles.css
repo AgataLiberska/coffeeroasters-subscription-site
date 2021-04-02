@@ -307,7 +307,7 @@ ol, ul {
 .header__logo::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -0.5rem;
   height: 0px;
   width: 100%;
   background-color: #333d4b;
@@ -345,8 +345,9 @@ ol, ul {
 }
 
 .header__nav__link {
+  position: relative;
   display: block;
-  padding-left: 2rem;
+  margin-left: 2rem;
   text-decoration: none;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -358,8 +359,30 @@ ol, ul {
   transition: all 200ms ease-in-out;
 }
 
+.header__nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  height: 0px;
+  width: 100%;
+  background-color: #333d4b;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
+}
+
 .header__nav__link:hover {
   color: #333d4b;
+}
+
+.header__nav__link:focus {
+  outline: 0;
+  color: #333d4b;
+}
+
+.header__nav__link:focus::after {
+  height: 2px;
 }
 
 .footer {

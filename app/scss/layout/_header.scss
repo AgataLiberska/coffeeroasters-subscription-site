@@ -30,7 +30,7 @@
     &::after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: -0.5rem;
         height: 0px;
         width: 100%;
         background-color: $darkGreyBlue;
@@ -67,8 +67,9 @@
 }
 
 .header__nav__link {
+    position: relative;
     display: block;
-    padding-left: 2rem;
+    margin-left: 2rem;
     text-decoration: none;
     font-size: 0.75rem;
     line-height: 1rem;
@@ -78,8 +79,28 @@
     color: $grey;
     transition: all 200ms ease-in-out;
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        height: 0px;
+        width: 100%;
+        background-color: $darkGreyBlue;
+        transform: translateX(-100%);
+        transition: height 200ms ease-in-out;
+    }
+
     &:hover {
         color: $darkGreyBlue;
+    }
+
+    &:focus {
+        outline: 0;
+        color: $darkGreyBlue;
+
+        &::after {
+            height: 2px;
+        }
     }
 }
 
