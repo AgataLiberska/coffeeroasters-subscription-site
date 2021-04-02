@@ -14,6 +14,17 @@
     &:hover {
         background-color: $cyan;
     }   
+
+    &:focus {
+        outline: 0;
+        background-color: $cyan;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+
 }
 
 .button-disabled {

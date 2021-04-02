@@ -201,6 +201,16 @@ ol, ul {
   background-color: #66d2cf;
 }
 
+.button:focus {
+  outline: 0;
+  background-color: #66d2cf;
+}
+
+.button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .button-disabled {
   border: 0;
   background-color: #e2dedb;
