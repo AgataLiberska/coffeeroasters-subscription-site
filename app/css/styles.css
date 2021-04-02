@@ -309,12 +309,12 @@ ol, ul {
   position: absolute;
   bottom: -0.5rem;
   height: 0px;
-  width: 100%;
+  width: 0%;
   background-color: #333d4b;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: height 200ms ease-in-out;
-  transition: height 200ms ease-in-out;
+  -webkit-transition: height 200ms ease-in-out, width 200ms ease-in-out;
+  transition: height 200ms ease-in-out, width 200ms ease-in-out;
 }
 
 .header__logo:focus {
@@ -323,6 +323,7 @@ ol, ul {
 
 .header__logo:focus::after {
   height: 3px;
+  width: 100%;
 }
 
 .header__logo__img {
@@ -364,12 +365,12 @@ ol, ul {
   position: absolute;
   bottom: -0.5rem;
   height: 0px;
-  width: 100%;
+  width: 0%;
   background-color: #333d4b;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: height 200ms ease-in-out;
-  transition: height 200ms ease-in-out;
+  -webkit-transition: height 200ms ease-in-out, width 200ms ease-in-out;
+  transition: height 200ms ease-in-out, width 200ms ease-in-out;
 }
 
 .header__nav__link:hover {
@@ -383,6 +384,7 @@ ol, ul {
 
 .header__nav__link:focus::after {
   height: 2px;
+  width: 100%;
 }
 
 .footer {

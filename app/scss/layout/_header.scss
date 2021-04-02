@@ -32,10 +32,10 @@
         position: absolute;
         bottom: -0.5rem;
         height: 0px;
-        width: 100%;
+        width: 0%;
         background-color: $darkGreyBlue;
         transform: translateX(-100%);
-        transition: height 200ms ease-in-out;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
     }
 
     &:focus {
@@ -43,6 +43,7 @@
 
         &::after {
             height: 3px;
+            width: 100%;
         }
     }
 
@@ -84,10 +85,10 @@
         position: absolute;
         bottom: -0.5rem;
         height: 0px;
-        width: 100%;
+        width: 0%;
         background-color: $darkGreyBlue;
         transform: translateX(-100%);
-        transition: height 200ms ease-in-out;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
     }
 
     &:hover {
@@ -100,6 +101,7 @@
 
         &::after {
             height: 2px;
+            width: 100%
         }
     }
 }
