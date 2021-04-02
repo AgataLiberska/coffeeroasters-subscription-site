@@ -14,16 +14,34 @@
     @include breakpoint-up(xlarge) {
         padding-top: 2.75rem; 
         padding-bottom: 2.75rem;
+
     }
 }
 
 .header__logo {
+    position: relative;
     display: block;
     width: 10.25rem;
 
     @include breakpoint-up(medium) {
         width: 14.75rem;
     }
+
+    &:focus {
+        outline: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+            background-color: $darkGreyBlue;
+            transform: translateX(-100%);
+        }
+    }
+
+
 }
 
 .header__logo__img {

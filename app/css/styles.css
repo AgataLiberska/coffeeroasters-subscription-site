@@ -293,6 +293,7 @@ ol, ul {
 }
 
 .header__logo {
+  position: relative;
   display: block;
   width: 10.25rem;
 }
@@ -301,6 +302,21 @@ ol, ul {
   .header__logo {
     width: 14.75rem;
   }
+}
+
+.header__logo:focus {
+  outline: 0;
+}
+
+.header__logo:focus::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #333d4b;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .header__logo__img {
