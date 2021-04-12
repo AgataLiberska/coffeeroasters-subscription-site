@@ -9,7 +9,7 @@
     }
 
     @include breakpoint-up(large) {
-        padding: 0 5.3125rem;
+        padding: 0 $inner-pad-lg;
         grid-template-columns: 1fr 1.2fr;
         gap: 7.75rem;
     }
@@ -45,7 +45,7 @@
 }
 
 .about-commitment__headline {
-    padding-bottom: 1.875rem;
+    margin-bottom: 1.875rem;
     font-size: 2rem;
     line-height: 3rem;
 }

@@ -9,11 +9,11 @@
         grid-template-columns: 1fr 2fr 1fr;
         justify-items: start;
         align-items: center;
-        padding: 3rem 3.5rem;
+        padding: 3rem $inner-pad-med;
     }
 
     @include breakpoint-up(xlarge) {
-        padding: 3rem 5.25rem;
+        padding: 3rem $inner-pad-lg;
     }
 }
 

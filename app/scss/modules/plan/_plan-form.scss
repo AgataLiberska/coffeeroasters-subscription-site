@@ -8,7 +8,7 @@
     }
 
     @include breakpoint-up(xlarge) {
-        padding: 0 5.3125rem;
+        padding: 0 $inner-pad-lg;
     }
 
 }

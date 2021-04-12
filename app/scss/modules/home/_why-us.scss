@@ -1,14 +1,14 @@
 .why-us {
     position: relative;
-    padding: 4rem 1.5rem 0;
+    padding: 4rem $inner-pad-sm 0;
     text-align: center;
 
     @include breakpoint-up(medium) {
-        padding: 3.5rem 3.5rem 0;
+        padding: 3.5rem $inner-pad-med 0;
     }
 
     @include breakpoint-up(xlarge) {
-        padding: 6.25rem 5.25rem 0;
+        padding: 6.25rem $inner-pad-lg 0;
     }
 
     &::before {
@@ -29,7 +29,7 @@
 }
 
 .why-us__heading {
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
     font-size: 1.75rem;
     line-height: 1.75rem;
     color: $lightCream;
@@ -40,24 +40,23 @@
     }
 
     @include breakpoint-up(xlarge) {
-        padding-bottom: 2rem;
+        margin-bottom: 2rem;
         font-size: 2.5rem;
     }
 }
 
 .why-us__tagline {
     max-width: 35rem;
-    margin: auto;
-    padding-bottom: 4rem;
+    margin: 0 auto 4rem;
     color: $lightCream;
 
     @include breakpoint-up(medium) {
-        padding-bottom: 4.375rem;
+        margin-bottom: 4.375rem;
     }
 
     @include breakpoint-up(xlarge) {
         max-width: 33.75;
-        padding-bottom: 5.375rem;
+        margin-bottom: 5.375rem;
     }
 }
 

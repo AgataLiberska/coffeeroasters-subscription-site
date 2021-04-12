@@ -419,13 +419,13 @@ ol, ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 3rem 3.5rem;
+    padding: 3rem 3.625rem;
   }
 }
 
 @media (min-width: 80rem) {
   .footer {
-    padding: 3rem 5.25rem;
+    padding: 3rem 5.3125rem;
   }
 }
 
@@ -533,7 +533,7 @@ ol, ul {
 .hero {
   max-width: 80rem;
   margin-bottom: 7.5rem;
-  padding: 6.25rem 1rem;
+  padding: 6.25rem 1.5rem;
   background-image: url("/assets/home/mobile/image-hero-coffeepress.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -553,15 +553,14 @@ ol, ul {
 @media (min-width: 80rem) {
   .hero {
     margin-bottom: 8.5rem;
-    padding: 7.25rem 43.875rem 7.25rem 5.25rem;
+    padding: 7.25rem 43.875rem 7.25rem 5.3125rem;
     background-image: url("/assets/home/desktop/image-hero-coffeepress.jpg");
   }
 }
 
 .hero__heading {
   max-width: 23rem;
-  margin: 0 auto;
-  padding-bottom: 1.5rem;
+  margin: 0 auto 1.5rem;
   font-size: 2.5rem;
   line-height: 2.5rem;
   color: #fefcf7;
@@ -584,8 +583,7 @@ ol, ul {
 
 .hero__tagline {
   max-width: 23rem;
-  margin: 0 auto;
-  padding-bottom: 2.5rem;
+  margin: 0 auto 2.5rem;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   color: #fefcf7;
@@ -696,18 +694,18 @@ ol, ul {
 }
 
 .collection__item:not(:last-child) {
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 48rem) {
   .collection__item:not(:last-child) {
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
 @media (min-width: 80rem) {
   .collection__item:not(:last-child) {
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -764,21 +762,21 @@ ol, ul {
 }
 
 .collection__item__heading {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
 @media (min-width: 48rem) {
   .collection__item__heading {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 80rem) {
   .collection__item__heading {
-    padding-top: 4.5rem;
+    margin-top: 4.5rem;
   }
 }
 
@@ -803,13 +801,13 @@ ol, ul {
 
 @media (min-width: 48rem) {
   .why-us {
-    padding: 3.5rem 3.5rem 0;
+    padding: 3.5rem 3.625rem 0;
   }
 }
 
 @media (min-width: 80rem) {
   .why-us {
-    padding: 6.25rem 5.25rem 0;
+    padding: 6.25rem 5.3125rem 0;
   }
 }
 
@@ -832,7 +830,7 @@ ol, ul {
 }
 
 .why-us__heading {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   font-size: 1.75rem;
   line-height: 1.75rem;
   color: #fefcf7;
@@ -847,28 +845,27 @@ ol, ul {
 
 @media (min-width: 80rem) {
   .why-us__heading {
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     font-size: 2.5rem;
   }
 }
 
 .why-us__tagline {
   max-width: 35rem;
-  margin: auto;
-  padding-bottom: 4rem;
+  margin: 0 auto 4rem;
   color: #fefcf7;
 }
 
 @media (min-width: 48rem) {
   .why-us__tagline {
-    padding-bottom: 4.375rem;
+    margin-bottom: 4.375rem;
   }
 }
 
 @media (min-width: 80rem) {
   .why-us__tagline {
     max-width: 33.75;
-    padding-bottom: 5.375rem;
+    margin-bottom: 5.375rem;
   }
 }
 
@@ -1011,7 +1008,7 @@ ol, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 7rem 2rem 5.5rem;
+  padding: 7rem 1.5rem 5.5rem;
   border-radius: 0.625rem;
   background-image: url("/assets/about/mobile/image-hero-whitecup.jpg");
   background-size: cover;
@@ -1039,7 +1036,7 @@ ol, ul {
 }
 
 .about-hero__headline {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   font-size: 1.75rem;
   line-height: 1.75rem;
   color: #fefcf7;
@@ -1123,20 +1120,20 @@ ol, ul {
 }
 
 .about-commitment__headline {
-  padding-bottom: 1.875rem;
+  margin-bottom: 1.875rem;
   font-size: 2rem;
   line-height: 3rem;
 }
 
 .about-quality {
   position: relative;
-  padding: 0 1.5rem 3.75rem 1.5rem;
+  padding: 0 1.5rem 3.75rem;
   text-align: center;
 }
 
 @media (min-width: 48rem) {
   .about-quality {
-    padding: 0 3.5rem 4.25rem 3.5rem;
+    padding: 0 3.625rem 4.25rem;
   }
 }
 
@@ -1226,7 +1223,7 @@ ol, ul {
 }
 
 .about-quality__heading {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   font-size: 2rem;
   line-height: 3rem;
   color: #fefcf7;
@@ -1273,7 +1270,7 @@ ol, ul {
 }
 
 .about-headquarters__heading {
-  padding-bottom: 4.5rem;
+  margin-bottom: 4.5rem;
   font-size: 1.5rem;
   line-height: 2rem;
   color: #83888f;
@@ -1307,11 +1304,11 @@ ol, ul {
 
 .about-headquarters__img {
   display: inline-block;
-  padding-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .about-headquarters__country {
-  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
   font-size: 1.75rem;
   line-height: 2.25rem;
 }
@@ -1349,7 +1346,7 @@ ol, ul {
 }
 
 .plan-hero__heading {
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   font-size: 2.5rem;
   line-height: 2.5rem;
   color: #fefcf7;
@@ -1371,7 +1368,7 @@ ol, ul {
 
 @media (min-width: 80rem) {
   .plan-hero__heading {
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     font-size: 4.5rem;
     line-height: 4.5rem;
   }
@@ -1728,35 +1725,34 @@ ol, ul {
   margin: 0 auto;
 }
 
-.how-to {
+.how-to, .how-to--dark {
   margin-bottom: 7.5rem;
   padding: 0 1.5rem;
   text-align: center;
 }
 
 @media (min-width: 48rem) {
-  .how-to {
+  .how-to, .how-to--dark {
     padding: 0 2.5rem;
     text-align: left;
   }
 }
 
 @media (min-width: 64rem) {
-  .how-to {
-    padding: 0 6rem;
+  .how-to, .how-to--dark {
+    padding: 0 6.125rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .how-to {
+  .how-to, .how-to--dark {
     max-width: 80rem;
     margin: 0 auto 7.5rem;
-    padding: 0 5.25rem;
+    padding: 0 5.3125rem;
   }
 }
 
 .how-to--dark {
-  margin-bottom: 7.5rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   border-radius: 0.625rem;

@@ -1,6 +1,6 @@
 .how-to {
     margin-bottom: 7.5rem;
-    padding: 0 1.5rem;
+    padding: 0 $inner-pad-sm;
     text-align: center;
 
     @include breakpoint-up(medium) {
@@ -9,18 +9,20 @@
     }
 
     @include breakpoint-up(large) {
-        padding: 0 6rem;
+        padding: 0 6.125rem;
     }
 
     @include breakpoint-up(xlarge) {
         max-width: 80rem;
         margin: 0 auto 7.5rem;
-        padding: 0 5.25rem;
+        padding: 0 $inner-pad-lg;
     }
 }
 
 .how-to--dark {
-    margin-bottom: 7.5rem;
+
+    @extend .how-to;
+    //margin-bottom: 7.5rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
     border-radius: $border-radius;
