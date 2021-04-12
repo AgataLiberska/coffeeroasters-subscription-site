@@ -5,7 +5,7 @@
     background-image: url('/assets/home/mobile/image-hero-coffeepress.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 0.625rem;
+    border-radius: $border-radius;
     text-align: center;
 
     @include breakpoint-up(medium) {

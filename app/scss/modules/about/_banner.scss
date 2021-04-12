@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 7rem 2rem 5.5rem;
-    border-radius: 0.625rem;
+    border-radius: $border-radius;
     background-image: url('/assets/about/mobile/image-hero-whitecup.jpg');
     background-size: cover;
     background-repeat: no-repeat;
