@@ -159,6 +159,7 @@ html {
 
 *, *::before, *::after {
   margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -186,6 +187,10 @@ body.noscroll {
 
 h1, h2, h3, h4 {
   font-family: "Fraunces", serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 ol, ul {
@@ -1513,28 +1518,50 @@ ol, ul {
 @media (min-width: 64rem) {
   .create-plan__nav {
     display: block;
+    counter-reset: subscription-form-nav;
   }
 }
 
 .create-plan__nav__item {
-  display: block;
   width: 100%;
   padding: 1.5rem 0;
-  border-bottom: 0.5px solid #83888f;
+  counter-increment: subscription-form-nav;
+  opacity: 0.5;
+}
+
+.create-plan__nav__item:not(:last-of-type) {
+  border-bottom: 1px solid #83888f;
+}
+
+.create-plan__nav__item::before {
+  content: "0" counter(subscription-form-nav);
+  margin-right: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  opacity: 0.5;
+}
+
+.create-plan__nav__item:hover {
+  opacity: 1;
+}
+
+.create-plan__nav__item__link {
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
   line-height: 2rem;
   color: #83888f;
-  opacity: 0.4;
-  text-decoration: none;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-.create-plan__nav__item:hover, .create-plan__nav__item:focus {
-  outline: none;
+.create-plan__nav__item__link:focus {
+  outline: 0;
+}
+
+.create-plan__nav__item__link:active {
   color: #333d4b;
-  opacity: 1;
 }
 
 .create-plan__group__toggle {
@@ -1657,17 +1684,9 @@ ol, ul {
 }
 
 .create-plan__form__options {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-  gap: 1rem;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  border: none;
-  padding: 0 0 2rem;
   height: 0px;
+  border: none;
+  margin: 0 0 2rem;
   overflow: hidden;
   opacity: 0;
   -webkit-transition: all 300ms ease-in-out;
@@ -1676,11 +1695,16 @@ ol, ul {
 
 @media (min-width: 48rem) {
   .create-plan__form__options {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
-    gap: 0.625rem;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 1.5rem;
   }
 }
 
@@ -1697,6 +1721,16 @@ ol, ul {
   transition: all 200ms ease-in-out;
 }
 
+.create-plan__form__label:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .create-plan__form__label:not(:last-child) {
+    margin-bottom: unset;
+  }
+}
+
 .create-plan__form__label:hover {
   background-color: #fdd6ba;
   cursor: pointer;
@@ -1704,8 +1738,7 @@ ol, ul {
 
 @media (min-width: 48rem) {
   .create-plan__form__label {
-    padding-top: 2rem;
-    padding-bottom: 5.25rem;
+    padding: 2rem 1.5rem 5.25rem;
   }
 }
 
