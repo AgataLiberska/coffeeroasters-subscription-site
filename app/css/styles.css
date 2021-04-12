@@ -433,6 +433,13 @@ ol, ul {
   padding-bottom: 3rem;
 }
 
+@media (max-width: 23.375rem) {
+  .footer__logo {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
 @media (min-width: 48rem) {
   .footer__logo {
     padding-bottom: 2rem;
@@ -446,6 +453,15 @@ ol, ul {
 }
 
 .footer__logo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: auto;
+}
+
+.footer__logo__img path:first-of-type {
   fill: #fff;
 }
 

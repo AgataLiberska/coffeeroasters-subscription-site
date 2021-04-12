@@ -20,6 +20,11 @@
 .footer__logo {
     padding-bottom: 3rem;
 
+    @include breakpoint-down(xsmall) {
+        max-width: 90%;
+        margin: auto;
+    }
+
     @include breakpoint-up(medium) {
         padding-bottom: 2rem;
     }
@@ -29,8 +34,22 @@
     }
 }
 
+
+
 .footer__logo__img {
-    fill: $white;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+
+    & path {
+
+        &:first-of-type {
+            fill: $white;
+        }
+
+    }
 }
 
 
