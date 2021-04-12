@@ -5,6 +5,7 @@
     right: 0;
     left: 0;
     background-image: linear-gradient($lightCream 35%, $lightCreamGradient);
+    z-index: 4;
 
     @include breakpoint-up(medium) {
         display: none;

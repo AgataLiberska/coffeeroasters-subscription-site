@@ -234,6 +234,7 @@ ol, ul {
   left: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(35%, #fefcf7), to(rgba(254, 252, 247, 0.56)));
   background-image: linear-gradient(#fefcf7 35%, rgba(254, 252, 247, 0.56));
+  z-index: 4;
 }
 
 @media (min-width: 48rem) {
