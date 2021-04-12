@@ -54,6 +54,8 @@
 
 
 .footer__nav {
+    display: flex;
+    flex-direction: row;
     padding-bottom: 1.5rem;
 
     @include breakpoint-up(medium) {
@@ -70,12 +72,13 @@
     padding-bottom: 1.5rem;
 
     @include breakpoint-up(medium) {
-        display: inline-block;
+        display: flex;
         padding: 0 1rem;
     }
 }
 
 .footer__nav__link {
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -85,14 +88,35 @@
     color: $grey;
     transition: all 200ms ease-in-out;
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: $lightCream;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
     &:hover {
         color: $lightCream;
     }
 
-
+    &:focus {
+        outline: 0;
+        color: $lightCream; 
+        
+        &::after{
+            height: 2px;
+            width: 100%;
+        }
+    }
 }
 
 .footer__social {
+    display: flex;
+    flex-direction: row;
 
     @include breakpoint-up(large) {
         justify-self: end;
@@ -100,16 +124,40 @@
 }
 
 .footer__social__link {
-    display: inline-block;
-    padding: 0 0.75rem;
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
 
     & svg path {
         transition: all 200ms ease-in-out;
     }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        height: 0px;
+        width: 0%;
+        background-color: $paleOrange;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
     
     &:hover svg path {
         fill: $paleOrange;
+    }
+
+    &:focus {
+        outline: 0;
+        
+        & svg path {
+            fill: $paleOrange; 
+        } 
+        
+        &::after{
+            height: 2px;
+            width: 100%;
+        }
     }
 
 }

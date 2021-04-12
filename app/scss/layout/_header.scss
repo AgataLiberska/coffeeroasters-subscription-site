@@ -31,10 +31,10 @@
         content: '';
         position: absolute;
         bottom: -0.5rem;
+        left: 0;
         height: 0px;
         width: 0%;
         background-color: $darkGreyBlue;
-        transform: translateX(-100%);
         transition: height 200ms ease-in-out, width 200ms ease-in-out;
     }
 
@@ -84,10 +84,10 @@
         content: '';
         position: absolute;
         bottom: -0.5rem;
+        left: 0;
         height: 0px;
         width: 0%;
         background-color: $darkGreyBlue;
-        transform: translateX(-100%);
         transition: height 200ms ease-in-out, width 200ms ease-in-out;
     }
 
