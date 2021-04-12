@@ -74,40 +74,48 @@
 }
 
 .p-x {
+  max-width: 80rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
 @media (min-width: 48rem) {
   .p-x {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding: unset;
+    margin: 0 2.5rem;
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 64rem) {
   .p-x {
-    max-width: 80rem;
+    margin: 0 5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .p-x {
     margin: auto;
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 
 .m-x {
   max-width: 80rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin: 0 1.5rem;
 }
 
 @media (min-width: 48rem) {
   .m-x {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin: 0 2.5rem;
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 64rem) {
+  .m-x {
+    margin: 0 5rem;
+  }
+}
+
+@media (min-width: 90rem) {
   .m-x {
     margin: auto;
   }
@@ -123,7 +131,7 @@
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .m-b-med {
     margin-bottom: 10.5rem;
   }
@@ -139,7 +147,7 @@
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .m-b-lg {
     margin-bottom: 12.5rem;
   }
@@ -169,7 +177,7 @@ body.noscroll {
   overflow: hidden;
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   body {
     font-size: 1rem;
     line-height: 1.625rem;
@@ -301,7 +309,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .header {
     padding-top: 2.75rem;
     padding-bottom: 2.75rem;
@@ -422,7 +430,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .footer {
     padding: 3rem 5.3125rem;
   }
@@ -638,7 +646,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .hero {
     margin-bottom: 8.5rem;
     padding: 7.25rem 43.875rem 7.25rem 5.3125rem;
@@ -663,7 +671,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .hero__heading {
     max-width: 31rem;
   }
@@ -685,7 +693,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .hero__tagline {
     max-width: 26rem;
   }
@@ -712,7 +720,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .collection__heading {
     font-size: 9.375rem;
   }
@@ -757,7 +765,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .collection__list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -791,7 +799,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .collection__item:not(:last-child) {
     margin-bottom: 0;
   }
@@ -806,7 +814,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .collection__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -843,7 +851,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .collection__item__info {
     text-align: center;
   }
@@ -862,7 +870,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .collection__item__heading {
     margin-top: 4.5rem;
   }
@@ -874,7 +882,7 @@ ol, ul {
   line-height: 1.5625rem;
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .collection__item__description {
     font-size: 1rem;
     line-height: 1.625rem;
@@ -893,7 +901,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .why-us {
     padding: 6.25rem 5.3125rem 0;
   }
@@ -931,7 +939,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .why-us__heading {
     margin-bottom: 2rem;
     font-size: 2.5rem;
@@ -950,7 +958,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .why-us__tagline {
     max-width: 33.75;
     margin-bottom: 5.375rem;
@@ -1304,7 +1312,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .about-quality__copy {
     max-width: 33.75rem;
   }
@@ -1454,7 +1462,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .plan-hero__heading {
     margin-bottom: 2rem;
     font-size: 4.5rem;
@@ -1476,7 +1484,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .plan-hero__tagline {
     padding-right: 0;
   }
@@ -1492,7 +1500,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .create-plan {
     padding: 0 5.3125rem;
   }
@@ -1836,6 +1844,7 @@ ol, ul {
 }
 
 .how-to, .how-to--dark-bg {
+  max-width: 80rem;
   margin-bottom: 7.5rem;
   padding: 0 1.5rem;
   text-align: center;
@@ -1851,10 +1860,11 @@ ol, ul {
 @media (min-width: 64rem) {
   .how-to, .how-to--dark-bg {
     padding: 0 6.125rem;
+    margin: 0 5rem 7.5rem;
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .how-to, .how-to--dark-bg {
     max-width: 80rem;
     margin: 0 auto 7.5rem;
@@ -2003,7 +2013,7 @@ ol, ul {
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .how-to__step__heading {
     font-family: 2rem;
     line-height: 2.25rem;
@@ -2036,12 +2046,12 @@ ol, ul {
 
 @media (min-width: 64rem) {
   .how-to--dark-bg {
-    margin: 0 2.5rem 10.5rem;
+    margin: 0 5rem 10.5rem;
     padding: 7.25rem 5.3125rem 6.25rem;
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
   .how-to--dark-bg {
     max-width: 80rem;
     margin: 0 auto 10.5rem;
