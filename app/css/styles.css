@@ -193,6 +193,7 @@ ol, ul {
   font-size: 1.125rem;
   line-height: 1.5rem;
   color: #fefcf7;
+  cursor: pointer;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
