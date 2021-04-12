@@ -1,4 +1,5 @@
 // MOBILE NAVBAR ========================================
+const body = document.querySelector('body');
 const navToggle = document.querySelector('.js-nav-toggle');
 const openNav = document.querySelector('.js-toggle-open');
 const closeNav = document.querySelector('.js-toggle-close');
@@ -263,6 +264,8 @@ navToggle.addEventListener('click', () => {
         //fade-in the hamburger button
         fadeIn(openNav);
 
+        body.classList.remove('noscroll');
+
     }
     else { //if nav is not open
 
@@ -279,7 +282,7 @@ navToggle.addEventListener('click', () => {
         //fade in the X button
         fadeIn(closeNav);
 
-
+        body.classList.add('noscroll');
     }
 
     //fade in nav

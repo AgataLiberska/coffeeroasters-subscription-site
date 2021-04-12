@@ -16,6 +16,10 @@ body {
     line-height: 1.5625rem;
     color: $darkGreyBlue;
 
+    &.noscroll {
+        overflow: hidden;
+    }
+
     @include breakpoint-up(xlarge) {
         font-size: 1rem;
         line-height: 1.625rem;
