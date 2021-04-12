@@ -171,7 +171,7 @@ body {
   font-family: "Barlow", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
-  color: #333d4b;
+  color: #2C343E;
 }
 
 body.noscroll {
@@ -289,7 +289,7 @@ ol, ul {
   font-family: "Fraunces", serif;
   font-size: 1.5rem;
   line-height: 2rem;
-  color: #333d4b;
+  color: #2C343E;
 }
 
 .header {
@@ -340,7 +340,7 @@ ol, ul {
   left: 0;
   height: 0px;
   width: 0%;
-  background-color: #333d4b;
+  background-color: #2C343E;
   -webkit-transition: height 200ms ease-in-out, width 200ms ease-in-out;
   transition: height 200ms ease-in-out, width 200ms ease-in-out;
 }
@@ -395,18 +395,18 @@ ol, ul {
   left: 0;
   height: 0px;
   width: 0%;
-  background-color: #333d4b;
+  background-color: #2C343E;
   -webkit-transition: height 200ms ease-in-out, width 200ms ease-in-out;
   transition: height 200ms ease-in-out, width 200ms ease-in-out;
 }
 
 .header__nav__link:hover {
-  color: #333d4b;
+  color: #2C343E;
 }
 
 .header__nav__link:focus {
   outline: 0;
-  color: #333d4b;
+  color: #2C343E;
 }
 
 .header__nav__link:focus::after {
@@ -416,7 +416,7 @@ ol, ul {
 
 .footer {
   margin-bottom: 4.5rem;
-  background-color: #333d4b;
+  background-color: #2C343E;
   text-align: center;
   padding: 3.375rem 0;
 }
@@ -920,7 +920,7 @@ ol, ul {
   right: 0;
   height: 62%;
   border-radius: 0.625rem;
-  background-color: #333d4b;
+  background-color: #2C343E;
   z-index: -1;
 }
 
@@ -1262,7 +1262,7 @@ ol, ul {
   left: 0;
   height: 88%;
   border-radius: 0.625rem;
-  background-color: #333d4b;
+  background-color: #2C343E;
   z-index: -1;
 }
 
@@ -1561,7 +1561,7 @@ ol, ul {
 }
 
 .create-plan__nav__item__link:active {
-  color: #333d4b;
+  color: #2C343E;
 }
 
 .create-plan__group__toggle {
@@ -1599,7 +1599,7 @@ ol, ul {
 }
 
 .create-plan__group__toggle:focus > .create-plan__group__toggle__text {
-  color: #333d4b;
+  color: #2C343E;
 }
 
 .create-plan__group__toggle:focus > .create-plan__group__toggle__text::after {
@@ -1608,7 +1608,7 @@ ol, ul {
 }
 
 .create-plan__group__toggle:hover .create-plan__group__toggle__text {
-  color: #333d4b;
+  color: #2C343E;
 }
 
 .create-plan__group__toggle:disabled .create-plan__group__toggle__text {
@@ -1650,13 +1650,13 @@ ol, ul {
   left: 0;
   height: 0px;
   width: 0%;
-  background-color: #333d4b;
+  background-color: #2C343E;
   -webkit-transition: height 200ms ease-in-out, width 200ms ease-in-out;
   transition: height 200ms ease-in-out, width 200ms ease-in-out;
 }
 
 .create-plan__group__toggle__text:hover {
-  color: #333d4b;
+  color: #2C343E;
 }
 
 @media (min-width: 48rem) {
@@ -1778,7 +1778,7 @@ ol, ul {
   margin-bottom: 3.5rem;
   padding: 2rem 1.5rem;
   border-radius: 0.625rem;
-  background-color: #333d4b;
+  background-color: #2C343E;
 }
 
 .order-summary:focus {
@@ -1852,7 +1852,7 @@ ol, ul {
 }
 
 .modal__header {
-  background-color: #333d4b;
+  background-color: #2C343E;
 }
 
 .modal__heading {
@@ -2066,7 +2066,7 @@ ol, ul {
   padding-top: 5rem;
   padding-bottom: 5rem;
   border-radius: 0.625rem;
-  background-color: #333d4b;
+  background-color: #2C343E;
 }
 
 @media (min-width: 48rem) {
