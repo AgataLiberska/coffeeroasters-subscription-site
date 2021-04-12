@@ -133,6 +133,10 @@
     line-height: 2rem;
     color: $lightCream;
 
+    @include breakpoint-down(xsmall) {
+        padding: 0 1rem 1.5rem;
+    }
+
     @include breakpoint-up(medium) {
         padding-bottom: 1rem;
     }

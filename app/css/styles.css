@@ -967,6 +967,12 @@ ol, ul {
   color: #fefcf7;
 }
 
+@media (max-width: 23.375rem) {
+  .why-us__card__heading {
+    padding: 0 1rem 1.5rem;
+  }
+}
+
 @media (min-width: 48rem) {
   .why-us__card__heading {
     padding-bottom: 1rem;
@@ -1228,7 +1234,7 @@ ol, ul {
 
 @media (max-width: 23.375rem) {
   .about-quality__heading {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2rem;
   }
 }
