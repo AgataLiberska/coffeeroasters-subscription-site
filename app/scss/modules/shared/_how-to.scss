@@ -19,34 +19,7 @@
     }
 }
 
-.how-to--dark {
-
-    @extend .how-to;
-    //margin-bottom: 7.5rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    border-radius: $border-radius;
-    background-color: $darkGreyBlue;
-
-    @include breakpoint-up(medium) {
-        margin-bottom: 9rem;
-        padding-top: 7rem;
-        padding-bottom: 6rem;
-    }
-
-    @include breakpoint-up(large) {
-        margin: 0 2.5rem 10.5rem;
-        padding: 7.25rem 5.3125rem 6.25rem;
-    }
-
-    @include breakpoint-up(xlarge) {
-        max-width: 80rem;
-        margin: 0 auto 10.5rem;
-        padding: 7.25rem 5.3125rem 6.25rem;
-    }
-}
-
-.how-to__heading {
+.how-to__heading {  // section heading
     padding-bottom: 5rem;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -61,101 +34,99 @@
     }
 }
 
-.how-to__info {
+.how-to__info { // list
+    counter-reset: how-to-counter;
+    margin-bottom: 4.75rem;
 
     @include breakpoint-up(medium) {
         display: flex;
+        margin-bottom: 2.75rem;
+    }
+
+    @include breakpoint-up(large) {
+        margin-bottom: 4rem;
     }
 }
 
-.how-to__step {
+.how-to__step { // list item (step)
     position: relative;
-    
+    counter-increment: how-to-counter;
 
     &:not(:last-of-type) {
-        padding-bottom: 3.5rem;
+        margin-bottom: 3.5rem;
 
         @include breakpoint-up(medium) {
-            border-top: 2px solid $paleOrange;
+            margin-bottom: unset;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            width: 100%;
+            height: 2px;
+            border: 1px solid $paleOrange;
         }
     }
 
     @include breakpoint-up(medium) {
         display: grid;
-        grid-template-rows: 12rem 6rem auto;
+        grid-template-rows: 7rem 9.125rem auto;
         padding-right: 1rem;
-        padding-bottom: 2.75rem;
-
     }
 
     @include breakpoint-up(large) {
+        grid-template-rows: 9.625rem 9.5625rem auto;
         padding-right: 6rem;
     }
-}
-
-.how-to--light__step {
-
-    @include breakpoint-up(medium) {
-
-        &::before {
-            content: '';
-            position: absolute;
-            height: 2rem;
-            width: 2rem;
-            background: $lightCream;
-            border: 2px solid $darkCyan;
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-    }
 
 
-    &:last-of-type {
-        padding-bottom: 5rem;
+    &::before {  // counter
+        content: "0" counter(how-to-counter);
+        font-family: $heading;
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+        color: $paleOrange;
 
         @include breakpoint-up(medium) {
-            padding-right: 0;
-            padding-bottom: 2.75rem;
-
-
+            align-self: end;
         }
     }
 }
 
-.how-to--dark__step {
-    @include breakpoint-up(medium) {
-        &::before {
-            content: '';
-            position: absolute;
-            height: 2rem;
-            width: 2rem;
-            background: $darkGreyBlue;
-            border: 2px solid $darkCyan;
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-    }
-}
-
-.how-to__step-no {
+.how-to__step__circle {
+    position: absolute;
     display: block;
-    padding-bottom: 1.5rem;
-    font-family: $heading;
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    color: $paleOrange;
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid $darkCyan;
+    border-radius: 50%;
+    background-color: $lightCream;
+    transform: translateY(calc(-50% + 2px));
+    z-index: 2;
 
-    @include breakpoint-up(medium) {
-        align-self: center;
-        padding-bottom:0;
-        padding-top: 2rem;
+    &.dark-bg {
+        background-color: transparent;
     }
 }
 
 .how-to__step__heading {
-    padding-bottom: 1.5rem;
+    margin: 1.5rem 0;
     font-size: 1.75rem;
     line-height: 2rem;
+
+    &.dark-bg {
+        color: $lightCream;
+    }
+
+    @include breakpoint-up(medium) {
+        margin: 2.625rem 0 2.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        margin: 2.375rem 0 2.625rem;
+    }
 
     @include breakpoint-up(xlarge) {
         font-family: 2rem;
@@ -163,15 +134,40 @@
     }
 }
 
-.how-to--dark__step__heading {
-    color: $lightCream;
-}
+
 
 .how-to__step__details {
     max-width: 28rem;
     margin: 0 auto;
+
+    &.dark-bg {
+        color: $lightCream;
+    }
 }
 
-.how-to--dark__step__details {
-    color: $lightCream;
+.how-to--dark-bg {
+
+    @extend .how-to;
+    
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-radius: $border-radius;
+    background-color: $darkGreyBlue;
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 9rem;
+        padding-top: 7rem;
+        padding-bottom: 6rem;
+    }
+
+    @include breakpoint-up(large) {
+        margin: 0 2.5rem 10.5rem;
+        padding: 7.25rem $inner-pad-lg 6.25rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        max-width: 80rem;
+        margin: 0 auto 10.5rem;
+        padding: 7.25rem $inner-pad-lg 6.25rem;
+    }
 }
