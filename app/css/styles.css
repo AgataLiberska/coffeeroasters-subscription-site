@@ -541,7 +541,6 @@ ol, ul {
   max-width: 23rem;
   margin: 0 auto;
   padding-bottom: 1.5rem;
-  font-family: "Fraunces", serif;
   font-size: 2.5rem;
   line-height: 2.5rem;
   color: #fefcf7;
@@ -593,7 +592,6 @@ ol, ul {
 .collection__heading {
   position: relative;
   padding-bottom: 1.5rem;
-  font-family: "Fraunces", serif;
   font-size: 2.25rem;
   line-height: 4.5rem;
   color: #83888f;
@@ -746,10 +744,8 @@ ol, ul {
 
 .collection__item__heading {
   padding-bottom: 1rem;
-  font-family: "Fraunces", serif;
   font-size: 1.5rem;
   line-height: 2rem;
-  color: #333d4b;
 }
 
 @media (min-width: 48rem) {
@@ -767,10 +763,8 @@ ol, ul {
 
 .collection__item__description {
   max-width: 20rem;
-  font-family: "Barlow", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.5625rem;
-  color: #333d4b;
 }
 
 @media (min-width: 90rem) {
@@ -818,7 +812,6 @@ ol, ul {
 
 .why-us__heading {
   padding-bottom: 1.5rem;
-  font-family: "Fraunces", serif;
   font-size: 1.75rem;
   line-height: 1.75rem;
   color: #fefcf7;
@@ -948,7 +941,6 @@ ol, ul {
 
 .why-us__card__heading {
   padding-bottom: 1.5rem;
-  font-family: "Fraunces", serif;
   font-size: 1.5rem;
   line-height: 2rem;
   color: #fefcf7;
@@ -1021,7 +1013,6 @@ ol, ul {
 
 .about-hero__headline {
   padding-bottom: 1.5rem;
-  font-family: "Fraunces", serif;
   font-size: 1.75rem;
   line-height: 1.75rem;
   color: #fefcf7;
