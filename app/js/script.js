@@ -327,11 +327,8 @@ confirmBtn.addEventListener('click', e => {
 
 
 // // submit form
-// subscriptionForm.addEventListener('submit', e=> {
-//     e.preventDefault();
-//     console.log(e);
-//     fadeOut(overlay);
-//     fadeOut(modal);
-// })
+subscriptionForm.addEventListener('submit', e=> {
+    fadeOut(overlay);
+})
 
 
