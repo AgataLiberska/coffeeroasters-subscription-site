@@ -57,17 +57,19 @@
 
         @include breakpoint-up(medium) {
             margin-bottom: unset;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 1rem;
+                width: 100%;
+                height: 2px;
+                border: 1px solid $paleOrange;
+            }
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 1rem;
-            width: 100%;
-            height: 2px;
-            border: 1px solid $paleOrange;
-        }
+
     }
 
     @include breakpoint-up(medium) {
@@ -96,18 +98,22 @@
 }
 
 .how-to__step__circle {
-    position: absolute;
-    display: block;
-    height: 2rem;
-    width: 2rem;
-    border: 2px solid $darkCyan;
-    border-radius: 50%;
-    background-color: $lightCream;
-    transform: translateY(calc(-50% + 2px));
-    z-index: 2;
+    display: none;
 
-    &.dark-bg {
-        background-color: transparent;
+    @include breakpoint-up(medium) {
+        position: absolute;
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        border: 2px solid $darkCyan;
+        border-radius: 50%;
+        background-color: $lightCream;
+        transform: translateY(calc(-50% + 2px));
+        z-index: 2;
+    
+        &.dark-bg {
+            background-color: transparent;
+        }
     }
 }
 

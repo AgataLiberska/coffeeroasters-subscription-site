@@ -6,7 +6,7 @@
 
     @include breakpoint-up(large) {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 3fr;
         justify-items: start;
         align-items: center;
         padding: 3rem $inner-pad-med;
@@ -52,19 +52,30 @@
     }
 }
 
-
 .footer__nav {
+    width: 100%;
+
+    @include breakpoint-up(large) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer__nav__main {
     display: flex;
-    flex-direction: row;
-    padding-bottom: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 
     @include breakpoint-up(medium) {
-        padding-bottom: 3.5rem;
+        flex-direction: row;
+        margin-bottom: 3.5rem;
     }
 
     @include breakpoint-up(large) {
-        padding-bottom: 0;
-        padding-left: 4rem;
+        margin-bottom: 0;
+        margin-left: 4rem;
     }
 }
 
@@ -116,11 +127,7 @@
 
 .footer__social {
     display: flex;
-    flex-direction: row;
-
-    @include breakpoint-up(large) {
-        justify-self: end;
-    }
+    justify-content: center;
 }
 
 .footer__social__link {
