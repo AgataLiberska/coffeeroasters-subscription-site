@@ -9,7 +9,8 @@
 
   <title>Coffeeroasters | Create your plan</title>
 
-  <script src="/app/js/script.js" defer></script>
+  <script src="/app/js/script.js" type="module"></script>
+  <!-- <script src="./app/js/functions/toggleNav.js" type="module"></script> -->
   <!-- <script src="/app/js/create-plan.js" defer></script> -->
 </head>
 
@@ -28,9 +29,9 @@
     
     <button type="button" class="mobile-nav__toggle js-nav-toggle" aria-expanded="false" aria-label="Toggle Navigation">
       <img src="/assets/shared/mobile/icon-hamburger.svg" alt="" class="js-toggle-open">
-      <img src="/assets/shared/mobile/icon-close.svg" alt="" class="hidden js-toggle-close">
+      <img src="/assets/shared/mobile/icon-close.svg" alt="" class="has-fade js-toggle-close">
     </button>
-    <nav class="mobile-nav js-mobile-nav hidden">
+    <nav class="mobile-nav js-mobile-nav has-fade">
       <ul class="mobile-nav__list">
         <li><a href="/index.html" class="mobile-nav__link">Home</a></li>
         <li><a href="/about.html" class="mobile-nav__link">About Us</a></li>

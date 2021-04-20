@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@900&display=swap");
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .hidden-visually {
@@ -15,26 +15,36 @@
   width: 1px;
 }
 
+.has-fade {
+  visibility: hidden;
+}
+
 @-webkit-keyframes fade-in {
   from {
+    visibility: hidden;
     opacity: 0;
   }
   1% {
+    visibility: visible;
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
 
 @keyframes fade-in {
   from {
+    visibility: hidden;
     opacity: 0;
   }
   1% {
+    visibility: visible;
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -46,24 +56,30 @@
 
 @-webkit-keyframes fade-out {
   from {
+    visibility: visible;
     opacity: 1;
   }
   99% {
+    visibility: visible;
     opacity: 0;
   }
   to {
+    visibility: hidden;
     opacity: 0;
   }
 }
 
 @keyframes fade-out {
   from {
+    visibility: visible;
     opacity: 1;
   }
   99% {
+    visibility: visible;
     opacity: 0;
   }
   to {
+    visibility: hidden;
     opacity: 0;
   }
 }
@@ -257,17 +273,21 @@ ol, ul {
 }
 
 .mobile-nav__toggle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
+  height: 3rem;
+  width: 3rem;
   padding: 1rem;
   border: 0;
   background: transparent;
   -webkit-transform: translateX(1rem);
           transform: translateX(1rem);
+  border: 1px solid red;
+}
+
+.mobile-nav__toggle img {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media (min-width: 48rem) {

@@ -1,9 +1,7 @@
+import toggleNav from './functions/toggleNav.js';
+
 // MOBILE NAVBAR ========================================
-const body = document.querySelector('body');
 const navToggle = document.querySelector('.js-nav-toggle');
-const openNav = document.querySelector('.js-toggle-open');
-const closeNav = document.querySelector('.js-toggle-close');
-const mobileNav = document.querySelector('.js-mobile-nav');
 
 // FORM ==================================================
 const subscriptionForm = document.getElementById('subscription-form');
@@ -246,51 +244,7 @@ function validateInputs(inputs) {
 // EVENT LISTENERS ======================================================
 
 // toggle mobile nav
-navToggle.addEventListener('click', () => {
-    //check if nav is open
-    if (mobileNav.classList.contains('fade-in')) {
-        
-        //update aria-expanded
-        navToggle.setAttribute("aria-expanded", "false");
-
-        //if it's already open, fade out the nav
-        fadeOut(mobileNav);
-        setTimeout(hide, 200, mobileNav);
-
-        //fade out the X button
-        fadeOut(closeNav);
-        hide(closeNav);
-
-        //fade-in the hamburger button
-        fadeIn(openNav);
-
-        body.classList.remove('noscroll');
-
-    }
-    else { //if nav is not open
-
-        //update aria-expanded
-        navToggle.setAttribute("aria-expanded", "true");
-
-        //fade out the hamburger button
-        fadeOut(openNav);
-        hide(openNav);
-
-        //fade-in the nav
-        fadeIn(mobileNav);
-
-        //fade in the X button
-        fadeIn(closeNav);
-
-        body.classList.add('noscroll');
-    }
-
-    //fade in nav
-    //change button image to cross
-    //change aria-expanded to true
-
-
-})
+navToggle.addEventListener('click', toggleNav)
 
 // toggle form accordions
 accordionToggles.forEach(accordion => {

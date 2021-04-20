@@ -13,12 +13,19 @@
 }
 
 .mobile-nav__toggle {
-    display: flex;
-    align-items: center;
+    position: relative;
+    height: 3rem;
+    width: 3rem;
     padding: 1rem           ;
     border: 0;
     background: transparent;
     transform: translateX(1rem);
+    border: 1px solid red;
+
+    & img {
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
 
     @include breakpoint-up(medium) {
         display:none;
