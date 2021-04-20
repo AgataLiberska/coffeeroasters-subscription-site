@@ -2,7 +2,7 @@ import toggleNav from './functions/toggleNav.js';
 import toggleAccordion from './functions/toggleAccordion.js';
 import handleInputs from './functions/handleInputs.js';
 import validateInputs from './functions/validateInputs.js';
-import displayOrderSummary from './functions/displayOrderSummary.js';
+import displaySummaryModal from './functions/displaySummaryModal.js';
 import submitForm from './functions/submitForm.js';
 
 
@@ -14,7 +14,7 @@ const confirmBtn = document.querySelector('.js-form-confirm');
 
 
 // EVENT LISTENERS 
-navToggle.addEventListener('click', toggleNav)
+navToggle.addEventListener('click', toggleNav);
 
 accordionToggles.forEach(accordion => {
     accordion.addEventListener('click', () => {
@@ -34,8 +34,8 @@ formInputs.forEach(input => {
     })
 })
 
-confirmBtn.addEventListener('click', displayOrderSummary)
+confirmBtn.addEventListener('click', displaySummaryModal);
 
-subscriptionForm.addEventListener('submit', submitForm)
+subscriptionForm.addEventListener('submit', submitForm);
 
 

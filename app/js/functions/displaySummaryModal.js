@@ -3,7 +3,7 @@ import updateField from './utility-functions/updateField.js';
 import pricing from '../pricing/pricing.js';
 
 
-function displayOrderSummary() {
+function displaySummaryModal() {
     const body = document.querySelector('body');
     const overlay = document.querySelector('.js-overlay');
     const modal = document.querySelector('.js-modal');
@@ -20,4 +20,4 @@ function displayOrderSummary() {
     updateField(modalTotal, pricing.getTotal().toFixed(2));
 }
 
-export default displayOrderSummary;
+export default displaySummaryModal;
