@@ -18,11 +18,12 @@
 }
 
 .footer__logo {
+    max-width: 90%;
+    margin: auto;
     padding-bottom: 3rem;
 
-    @include breakpoint-down(xsmall) {
-        max-width: 90%;
-        margin: auto;
+    @include breakpoint-up(small) {
+        max-width: 100%;
     }
 
     @include breakpoint-up(medium) {

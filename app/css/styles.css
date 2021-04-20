@@ -461,13 +461,14 @@ ol, ul {
 }
 
 .footer__logo {
+  max-width: 90%;
+  margin: auto;
   padding-bottom: 3rem;
 }
 
-@media (max-width: 23.375rem) {
+@media (min-width: 23rem) {
   .footer__logo {
-    max-width: 90%;
-    margin: auto;
+    max-width: 100%;
   }
 }
 
@@ -1078,15 +1079,15 @@ ol, ul {
 }
 
 .why-us__card__heading {
-  padding-bottom: 1.5rem;
+  padding: 0 1rem 1.5rem;
   font-size: 1.5rem;
   line-height: 2rem;
   color: #fefcf7;
 }
 
-@media (max-width: 23.375rem) {
+@media (min-width: 23rem) {
   .why-us__card__heading {
-    padding: 0 1rem 1.5rem;
+    padding: 0 0 1.5rem;
   }
 }
 
@@ -1344,15 +1345,15 @@ ol, ul {
 
 .about-quality__heading {
   margin-bottom: 1.5rem;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
   color: #fefcf7;
 }
 
-@media (max-width: 23.375rem) {
+@media (min-width: 23rem) {
   .about-quality__heading {
-    font-size: 1.25rem;
-    line-height: 2rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 

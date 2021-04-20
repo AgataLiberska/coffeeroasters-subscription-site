@@ -76,13 +76,13 @@
 
 .about-quality__heading {
     margin-bottom: 1.5rem;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
     color: $lightCream;
 
-    @include breakpoint-down(xsmall) {
-        font-size: 1.25rem;
-        line-height: 2rem;
+    @include breakpoint-up(small) {
+        font-size: 2rem;
+        line-height: 3rem;
     }
 }
 

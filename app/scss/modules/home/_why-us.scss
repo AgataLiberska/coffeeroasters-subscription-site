@@ -127,14 +127,16 @@
 }
 
 .why-us__card__heading {
-    padding-bottom: 1.5rem;
+    padding: 0 1rem 1.5rem;
     font-size: 1.5rem;
     line-height: 2rem;
     color: $lightCream;
 
-    @include breakpoint-down(xsmall) {
-        padding: 0 1rem 1.5rem;
+    @include breakpoint-up(small) {
+        padding: 0 0 1.5rem;
     }
+
+    
 
     @include breakpoint-up(medium) {
         padding-bottom: 1rem;
