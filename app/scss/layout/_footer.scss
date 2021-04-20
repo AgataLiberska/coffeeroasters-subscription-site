@@ -6,19 +6,25 @@
 
     @include breakpoint-up(large) {
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 3fr;
         justify-items: start;
         align-items: center;
-        padding: 3rem 3.5rem;
+        padding: 3rem $inner-pad-med;
     }
 
     @include breakpoint-up(xlarge) {
-        padding: 3rem 5.25rem;
+        padding: 3rem $inner-pad-lg;
     }
 }
 
 .footer__logo {
+    max-width: 90%;
+    margin: auto;
     padding-bottom: 3rem;
+
+    @include breakpoint-up(small) {
+        max-width: 100%;
+    }
 
     @include breakpoint-up(medium) {
         padding-bottom: 2rem;
@@ -29,21 +35,48 @@
     }
 }
 
+
+
 .footer__logo__img {
-    fill: $white;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+
+    & path {
+
+        &:first-of-type {
+            fill: $white;
+        }
+
+    }
 }
 
-
 .footer__nav {
-    padding-bottom: 1.5rem;
+    width: 100%;
+
+    @include breakpoint-up(large) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer__nav__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 
     @include breakpoint-up(medium) {
-        padding-bottom: 3.5rem;
+        flex-direction: row;
+        margin-bottom: 3.5rem;
     }
 
     @include breakpoint-up(large) {
-        padding-bottom: 0;
-        padding-left: 4rem;
+        margin-bottom: 0;
+        margin-left: 4rem;
     }
 }
 
@@ -51,12 +84,13 @@
     padding-bottom: 1.5rem;
 
     @include breakpoint-up(medium) {
-        display: inline-block;
+        display: flex;
         padding: 0 1rem;
     }
 }
 
 .footer__nav__link {
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -66,31 +100,72 @@
     color: $grey;
     transition: all 200ms ease-in-out;
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: $lightCream;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
     &:hover {
         color: $lightCream;
     }
 
-
-}
-
-.footer__social {
-
-    @include breakpoint-up(large) {
-        justify-self: end;
+    &:focus {
+        outline: 0;
+        color: $lightCream; 
+        
+        &::after{
+            height: 2px;
+            width: 100%;
+        }
     }
 }
 
-.footer__social__link {
-    display: inline-block;
-    padding: 0 0.75rem;
+.footer__social {
+    display: flex;
+    justify-content: center;
+}
 
+.footer__social__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
 
     & svg path {
         transition: all 200ms ease-in-out;
     }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        height: 0px;
+        width: 0%;
+        background-color: $paleOrange;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
     
     &:hover svg path {
         fill: $paleOrange;
+    }
+
+    &:focus {
+        outline: 0;
+        
+        & svg path {
+            fill: $paleOrange; 
+        } 
+        
+        &::after{
+            height: 2px;
+            width: 100%;
+        }
     }
 
 }

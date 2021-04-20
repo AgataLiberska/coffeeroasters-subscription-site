@@ -2,7 +2,7 @@
 
 $darkCyan: rgb(14, 135, 132);
 $cyan: rgb(102, 210, 207);
-$darkGreyBlue: rgb(51,61,75);
+$darkGreyBlue: #2C343E;
 $paleOrange: rgb(253, 214, 186);
 
 $lightCream: rgb(254, 252, 247);
@@ -22,12 +22,11 @@ $body: 'Barlow', sans-serif;
 //font-weights: 
 $regular: 400;
 $bold: 700;
-$black: 800;
-
-//spacing:
-$wrapper-mobile: 0 1.5rem;
-$wrapper-tablet: 0 2.5rem;
-$wrapper-desktop: 0 5rem;
 
 // border-radius
 $border-radius: 0.625rem;
+
+//spacing
+$inner-pad-sm: 1.5rem;
+$inner-pad-med: 3.625rem;
+$inner-pad-lg: 5.3125rem;

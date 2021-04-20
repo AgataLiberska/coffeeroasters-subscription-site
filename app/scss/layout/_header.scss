@@ -14,16 +14,40 @@
     @include breakpoint-up(xlarge) {
         padding-top: 2.75rem; 
         padding-bottom: 2.75rem;
+
     }
 }
 
 .header__logo {
+    position: relative;
     display: block;
     width: 10.25rem;
 
     @include breakpoint-up(medium) {
         width: 14.75rem;
     }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: $darkGreyBlue;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
+    &:focus {
+        outline: 0;
+
+        &::after {
+            height: 3px;
+            width: 100%;
+        }
+    }
+
+
 }
 
 .header__logo__img {
@@ -44,8 +68,9 @@
 }
 
 .header__nav__link {
+    position: relative;
     display: block;
-    padding-left: 2rem;
+    margin-left: 2rem;
     text-decoration: none;
     font-size: 0.75rem;
     line-height: 1rem;
@@ -55,8 +80,29 @@
     color: $grey;
     transition: all 200ms ease-in-out;
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: $darkGreyBlue;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
+
     &:hover {
         color: $darkGreyBlue;
+    }
+
+    &:focus {
+        outline: 0;
+        color: $darkGreyBlue;
+
+        &::after {
+            height: 2px;
+            width: 100%
+        }
     }
 }
 

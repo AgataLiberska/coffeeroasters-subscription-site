@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 7rem 2rem 5.5rem;
-    border-radius: 0.625rem;
+    padding: 7rem $inner-pad-sm 5.5rem;
+    border-radius: $border-radius;
     background-image: url('/assets/about/mobile/image-hero-whitecup.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,20 +12,19 @@
 
     @include breakpoint-up(medium) {
         align-items: flex-start;
-        padding: 7.375rem 3.625rem;
+        padding: 7.375rem $inner-pad-med;
         background-image: url('/assets/about/tablet/image-hero-whitecup.jpg');
         text-align: left;
     }
 
     @include breakpoint-up(large) {
-        padding: 8.5rem 5.3125rem;
+        padding: 8.5rem $inner-pad-lg;
         background-image: url('/assets/about/desktop/image-hero-whitecup.jpg');
     }
 }
 
 .about-hero__headline {
-    padding-bottom: 1.5rem;
-    font-family: $heading;
+    margin-bottom: 1.5rem;
     font-size: 1.75rem;
     line-height: 1.75rem;
     color: $lightCream;

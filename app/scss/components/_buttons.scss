@@ -9,11 +9,23 @@
     font-size: 1.125rem;
     line-height: 1.5rem;                      
     color: $lightCream;
+    cursor: pointer;
     transition: all 200ms ease-in-out;
 
     &:hover {
         background-color: $cyan;
     }   
+
+    &:focus {
+        outline: 0;
+        background-color: $cyan;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+
 }
 
 .button-disabled {

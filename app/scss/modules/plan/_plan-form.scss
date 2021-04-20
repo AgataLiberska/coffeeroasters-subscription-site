@@ -8,7 +8,7 @@
     }
 
     @include breakpoint-up(xlarge) {
-        padding: 0 5.3125rem;
+        padding: 0 $inner-pad-lg;
     }
 
 }
@@ -19,34 +19,51 @@
 
     @include breakpoint-up(large) {
         display: block;
+        counter-reset: subscription-form-nav;
     }
 }
 
 .create-plan__nav__item {
-    display: block;
     width: 100%;
     padding: 1.5rem 0;
-    border-bottom: 0.5px solid $grey;
-    font-family: $heading;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    color: $grey;
-    opacity: 0.4;
-    text-decoration: none;
-    transition: all 200ms ease-in-out;
+    counter-increment: subscription-form-nav;
+    opacity: 0.5;
 
-    &:hover, &:focus {
-        outline: none;
-        color: $darkGreyBlue;
+    &:not(:last-of-type) {
+        border-bottom: 1px solid $grey;
+    }
+
+    &::before {
+        content: "0" counter(subscription-form-nav);
+        margin-right: 1.5rem;
+        font-family: $heading;
+        font-size: 1.5rem;
+        font-weight: $bold;
+        line-height: 2rem;
+        opacity: 0.5;
+    }
+
+    &:hover {
         opacity: 1;
     }
 }
 
-// .create-plan__form {
-// }
+.create-plan__nav__item__link {
+    font-family: $heading;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $grey;
+    transition: all 200ms ease-in-out;
 
-// .create-plan__form__group {
-// }
+    &:focus {
+        outline: 0;
+    }
+
+    &:active {
+        color: $darkGreyBlue;
+    }
+}
+
 
 // form accordion toggle ----------------------------
 
@@ -71,11 +88,16 @@
 
     &:focus  {
         outline: none;
-        border-bottom: 1px solid $grey;
 
         & >.create-plan__group__toggle__text {
             color: $darkGreyBlue;
+
+            &::after {
+                height: 2px;
+                width: 100%;
+            }
         }
+
     }
 
     &:hover {
@@ -96,7 +118,7 @@
 
     &.is-open + .create-plan__form__options {
         height: max-content;
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
         opacity: 1;
 
         @include breakpoint-up(large) {
@@ -105,16 +127,28 @@
     }
 }
 
+
 // accordion button text
 .create-plan__group__toggle__text {
+    position: relative;
     display: inline-block;
-    padding-right: 4rem;
-    font-family: $heading;
+    margin-right: 4rem;
     font-size: 1.5rem;
     line-height: 1.75rem;
     color: $grey;
     text-align: left;
     transition: all 300ms ease-in-out;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        height: 0px;
+        width: 0%;
+        background-color: $darkGreyBlue;
+        transition: height 200ms ease-in-out, width 200ms ease-in-out;
+    }
 
     &:hover {
         color: $darkGreyBlue;
@@ -143,21 +177,19 @@
 
 // input group container ------------------------------
 .create-plan__form__options {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
-    align-items: stretch;
-    border: none;
-    padding: 0 0 2rem;
     height: 0px;
+    border: none;
+    margin: 0 0 2rem;
     overflow: hidden;
     opacity: 0;
     transition: all 300ms ease-in-out;
 
     @include breakpoint-up(medium) {
+        display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 1fr;
-        gap: 0.625rem;
+        align-items: stretch;
+        gap: 1.5rem;
     }
 }
 
@@ -173,14 +205,21 @@
     line-height: 2rem;
     transition: all 200ms ease-in-out;
 
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+
+        @include breakpoint-up(medium) {
+            margin-bottom: unset;
+        }
+    }
+
     &:hover {
         background-color: $paleOrange;
         cursor: pointer;
     }
 
     @include breakpoint-up(medium) {
-        padding-top: 2rem;
-        padding-bottom: 5.25rem;
+        padding: 2rem 1.5rem 5.25rem;
     }
 }
 

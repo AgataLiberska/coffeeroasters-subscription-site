@@ -1,5 +1,5 @@
 .plan-hero {
-    padding: 6.25rem 1.5rem 8.5rem;
+    padding: 6.25rem $inner-pad-sm 8.5rem;
     border-radius: $border-radius;
     background-image: url('/assets/plan/mobile/image-hero-blackcup.jpg');
     background-size: cover;
@@ -8,19 +8,19 @@
     text-align: center;
 
     @include breakpoint-up(medium) {
-        padding: 8rem 3.625rem 7.75rem;
+        padding: 8rem $inner-pad-med 7.75rem;
         background-image: url('/assets/plan/tablet/image-hero-blackcup.jpg');
         text-align: left;
     }
 
     @include breakpoint-up(large) {
-        padding: 8.5rem 5.3125rem;
+        padding: 8.5rem $inner-pad-lg;
         background-image: url('/assets/plan/desktop/image-hero-blackcup.jpg');
     }
 }
 
 .plan-hero__heading {
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
     font-size: 2.5rem;
     line-height: 2.5rem;
     color: $lightCream;
@@ -36,7 +36,7 @@
     }
 
     @include breakpoint-up(xlarge) {
-        padding-bottom: 2rem;
+        margin-bottom: 2rem;
         font-size: 4.5rem;
         line-height: 4.5rem;
     }
