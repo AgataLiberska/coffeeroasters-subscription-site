@@ -13,7 +13,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 85%;
-    min-width: 18.75rem;
+    min-width: 17rem;
     max-width: 33.75rem;
     border-radius: $border-radius;
     overflow: hidden;
@@ -26,10 +26,16 @@
 }
 
 .modal__heading {
-    padding: 1.7rem 1.5rem;
-    font-size: 1.75rem;
-    line-height: 2rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     color: $lightCream;
+
+    @include breakpoint-up(small) {
+        padding: 1.7rem 1.5rem;
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
 
     @include breakpoint-up(medium) {
         padding: 3rem 3.5rem 2.5rem;
@@ -37,8 +43,12 @@
 }
 
 .modal__main {
-    padding: 2.5rem 1.5rem 1.5rem;
+    padding: 1.5rem 1.5rem 1rem;
     background-color: $lightCream;
+
+    @include breakpoint-up(small) {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
 
     @include breakpoint-up(medium) {
         padding: 3.5rem;
@@ -46,15 +56,25 @@
 }
 
 .modal__summary {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-family: $heading;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
     color: $grey;
+
+    @include breakpoint-up(small) {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
 }
 
 .modal__text {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(small) {
+        margin-bottom: 2rem;
+    }
 
     @include breakpoint-up(medium) {
         margin-bottom: 3rem;

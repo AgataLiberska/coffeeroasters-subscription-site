@@ -1864,7 +1864,7 @@ ol, ul {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 85%;
-  min-width: 18.75rem;
+  min-width: 17rem;
   max-width: 33.75rem;
   border-radius: 0.625rem;
   overflow: hidden;
@@ -1876,10 +1876,18 @@ ol, ul {
 }
 
 .modal__heading {
-  padding: 1.7rem 1.5rem;
-  font-size: 1.75rem;
-  line-height: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #fefcf7;
+}
+
+@media (min-width: 23rem) {
+  .modal__heading {
+    padding: 1.7rem 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -1889,8 +1897,14 @@ ol, ul {
 }
 
 .modal__main {
-  padding: 2.5rem 1.5rem 1.5rem;
+  padding: 1.5rem 1.5rem 1rem;
   background-color: #fefcf7;
+}
+
+@media (min-width: 23rem) {
+  .modal__main {
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -1900,15 +1914,29 @@ ol, ul {
 }
 
 .modal__summary {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   font-family: "Fraunces", serif;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
   color: #83888f;
 }
 
+@media (min-width: 23rem) {
+  .modal__summary {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
 .modal__text {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 23rem) {
+  .modal__text {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width: 48rem) {
