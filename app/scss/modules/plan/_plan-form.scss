@@ -118,7 +118,7 @@
 
     &.is-open + .create-plan__form__options {
         height: max-content;
-        padding-bottom: 6rem;
+        padding-bottom: 4rem;
         opacity: 1;
 
         @include breakpoint-up(large) {

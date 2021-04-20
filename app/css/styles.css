@@ -281,7 +281,6 @@ ol, ul {
   background: transparent;
   -webkit-transform: translateX(1rem);
           transform: translateX(1rem);
-  border: 1px solid red;
 }
 
 .mobile-nav__toggle img {
@@ -1641,7 +1640,7 @@ ol, ul {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   opacity: 1;
 }
 
@@ -1869,6 +1868,7 @@ ol, ul {
   max-width: 33.75rem;
   border-radius: 0.625rem;
   overflow: hidden;
+  z-index: 3;
 }
 
 .modal__header {
@@ -1882,18 +1882,64 @@ ol, ul {
   color: #fefcf7;
 }
 
+@media (min-width: 48rem) {
+  .modal__heading {
+    padding: 3rem 3.5rem 2.5rem;
+  }
+}
+
 .modal__main {
   padding: 2.5rem 1.5rem 1.5rem;
   background-color: #fefcf7;
 }
 
+@media (min-width: 48rem) {
+  .modal__main {
+    padding: 3.5rem;
+  }
+}
+
+.modal__summary {
+  margin-bottom: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #83888f;
+}
+
 .modal__text {
-  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .modal__text {
+    margin-bottom: 3rem;
+  }
 }
 
 .modal__btn {
   display: block;
-  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .modal__btn {
+    width: 50%;
+    margin-left: 50%;
+  }
+}
+
+.modal__price {
+  display: inline-block;
+}
+
+@media (min-width: 48rem) {
+  .modal__price {
+    position: absolute;
+    left: 3.5rem;
+    font-size: 2rem;
+    color: #2C343E;
+  }
 }
 
 .how-to, .how-to--dark-bg {

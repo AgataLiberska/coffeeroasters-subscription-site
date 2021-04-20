@@ -4,14 +4,12 @@ import pricing from '../pricing/pricing.js';
 
 
 function displaySummaryModal() {
-    const body = document.querySelector('body');
     const overlay = document.querySelector('.js-overlay');
     const modal = document.querySelector('.js-modal');
     const modalSummary = document.querySelector('.js-modal-summary');
     const modalTotal = document.querySelector('.js-total');
     const orderSummary = document.querySelector('.js-summary');
 
-    body.classList.add('noscroll');
 
     fadeIn(overlay);
     fadeIn(modal);
